@@ -1,0 +1,112 @@
+﻿@model Login.Models.TB_USER
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TB_USER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PASSWORD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PASSWORD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STREET_NUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STREET_NUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STREET_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STREET_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APT_NUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APT_NUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROVINCE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROVINCE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZIPCODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZIPCODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHONE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHONE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POINT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POINT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CREDIT_NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CREDIT_NO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
