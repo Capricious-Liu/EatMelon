@@ -40,5 +40,9 @@ namespace Login.Models
                 .Property(e => e.PROVINCE)
                 .IsUnicode(false);
         }
+
+        public System.Data.Entity.DbSet<Login.Models.TB_STORE_TYPE> TB_STORE_TYPE { get; set; }
+
+        public System.Data.Entity.DbSet<Login.Models.TB_STORE> TB_STORE { get; set; }
     }
 }

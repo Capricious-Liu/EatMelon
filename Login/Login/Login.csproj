@@ -208,6 +208,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TB_STORE_TYPEController.cs" />
     <Compile Include="Controllers\TB_USERController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -313,6 +314,9 @@
     <Content Include="Views\TB_USER\Index.cshtml" />
     <Content Include="Views\TB_USER\LoginCheck.cshtml" />
     <Content Include="Views\TB_USER\regist.cshtml" />
+    <Content Include="Views\TB_STORE_TYPE\Create.cshtml" />
+    <Content Include="Views\TB_STORE_TYPE\Delete.cshtml" />
+    <Content Include="Views\TB_STORE_TYPE\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
