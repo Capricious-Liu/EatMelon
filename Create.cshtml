@@ -1,0 +1,48 @@
+﻿
+@model test2.Controllers.thismanagestore
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Regist</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>TB_USER</h4>
+        <hr />
+
+        @Html.TextBox("ID")
+        <br />
+        @Html.TextBox("NAME")
+        <br />
+        @Html.TextBox("NUM")
+        <br />
+        @Html.TextBox("PRICE")
+        <br />
+        @Html.TextBox("TYPE")
+        <br />
+        @Html.TextBox("DESCRIPTION")
+        <br />
+        @Html.TextBox("DISCOUNT_RATE")
+        <br />
+        @Html.TextBox("PICTURE")
+        <br />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
