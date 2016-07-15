@@ -108,7 +108,7 @@ namespace test2.Controllers
                         tb_store_type.TYPE = type;
                         db.TB_STORE_TYPE.Add(tb_store_type);
                         db.SaveChanges();
-                        return RedirectToAction("Index", new { id = en_user_st.deci_user });
+                        return RedirectToAction("Index", new { id = cur_user });
                     }
                 }
             }
