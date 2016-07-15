@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<test2.Controllers.thispicpro>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { cur_user = ViewData["sid"] })
+</p>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_pro.S_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_pro.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_pro.NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_pro.NUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_pro.PRICE)
+            </td>
+        </tr>
+    }
+</table>
