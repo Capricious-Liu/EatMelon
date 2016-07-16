@@ -1,0 +1,202 @@
+﻿@model IEnumerable<EatMelon.Controllers.ProductWithPicture>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 吃瓜网</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="~/Content/style.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="~/Scripts/move-top.js"></script>
+    <script type="text/javascript" src="~/Scripts/easing.js"></script>
+    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+    </script>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+    </script>
+</head>
+
+
+<body>
+
+
+
+    <div class="container">
+        <!----top-header---->
+        <div class="top-header">
+            <div class="logo">
+
+                <a href="index.html"><img src="~/images/logo.jpg" title="barndlogo" /></a>
+
+            </div>
+            <br>
+            
+
+
+
+
+
+
+            <!--这里是登陆以后的代码  这里是登陆以后的代码  这里是登陆以后的代码 ！-->
+            <div class="top-header-info">
+
+                @{
+                    EatMelon.Controllers.UserMessage usrMeg = (EatMelon.Controllers.UserMessage) TempData["UserMessage"];
+                    if (usrMeg != null && usrMeg.id != 0)
+                    {
+                        <div class="top-contact-info">
+                            <div class="top-contact-info">
+                                <ul class="unstyled-list list-inline">
+                                    <li style="font-family: 微软雅黑"><span class="phone"> </span>你好,<a href="personalPage">@usrMeg.name</a></li>
+                                    <li style="font-family: 微软雅黑"><a href="cartPage"><span class="mail"> </span></a></li>
+                                    <div class="clearfix"> </div>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="cart-details">
+                            <div class="add-to-cart">
+                                <ul class="unstyled-list list-inline">
+                                    <li>
+                                        <span class="cart"> </span>
+                                        <ul class="cart-sub">
+                                            <li><p>0 Products</p></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="login-rigister">
+                                <ul class="unstyled-list list-inline">
+                                    <li><a class="login" href="~/RegisterAndLogin/LoginCheck" style="font-family: 微软雅黑">登录</a></li>
+                                    <li><a class="rigister" href="~/RegisterAndLogin/Register" style="font-family: 微软雅黑">注册 <span> </span></a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    }
+}
+
+
+
+
+                
+
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+
+
+
+        <!----//top-header---->
+        <div class="top-header-nav">
+            <!----start-top-nav---->
+            <nav class="top-nav main-menu">
+                <ul class="top-nav">
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">商品 </a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">店铺</a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">品牌</a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">联系</a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">关于我们</a><span> </span></li>
+                    <div class="clearfix"> </div>
+                </ul>
+                <a href="#" id="pull">  <img src="~/images/nav-icon.png" title="menu" /> </a>
+            </nav>
+            <!----End-top-nav---->
+            <!---top-header-search-box--->
+            <div class="top-header-search-box">
+                @using (Html.BeginForm("Index", "SearchProduct"))
+                {
+                    <input type="text" name="keyString" placeholder="Search" required maxlength="22" />
+                    <input type="submit" value=" " />
+                }
+            </div>
+            <!---top-header-search-box--->
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+
+
+    <br />
+
+    <div class="container body-content">
+
+        @RenderBody()
+
+
+        <br />
+        <hr />
+
+            <div class="footer">
+                <div class="container">
+                    <div class="col-md-3 footer-logo">
+
+
+                        <img src="images/flogo.png"/>              @*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!为什么不用返回上级目录!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*@
+                    
+                    </div>
+
+
+                    <div class="col-md-7 footer-links">
+                        <ul class="unstyled-list list-inline1">
+                            <li style="font-family: 微软雅黑;font-size: larger;color: white">&copy; @DateTime.Now.Year 吃瓜网 | 保留一切权利</li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 footer-csoial">
+                        <ul class="unstyled-list list-inline">
+                            <li><a class="pin" href="#"><span> </span></a></li>
+                            <li><a class="twitter" href="#"><span> </span></a></li>
+
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

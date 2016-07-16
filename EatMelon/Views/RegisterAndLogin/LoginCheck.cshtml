@@ -1,0 +1,68 @@
+﻿<!-- 登录页面 -->
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>登录|吃瓜网|网上商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="电商,网上商城,吃瓜网" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- font files  -->
+    <link href='//fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- /font files  -->
+    <!-- css files -->
+    <link href="css/log_style.css" rel='stylesheet' type='text/css' media="all" />
+    <!-- /css files -->
+</head>
+<body>
+    <h1>登录我们的网站</h1>
+    <div class="log1">
+        <div class="content1">
+            <h2>登录</h2>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <input type="text" name="userName" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}">
+                <input type="password" name="passWord" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}">
+                <div class="button-row">
+                    <input type="submit" class="sign-in" value="提交">
+                    <input type="reset" class="reset" value="重置">
+                    <div class="clear"></div>
+                </div>
+                <p>还没有账户，快去 <a href="~/RegisterAndLogin/register" target="_blank">注册</a>一个</p>
+            }
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer">
+        <p>© 吃瓜网 | 保留一切权利 </p>
+    </div>
+
+    <style type="text/css">
+        a:link {
+            color: #ff5a60;
+            font-family: "微软雅黑";
+            font-size: 15px;
+        }
+        /* 未访问的链接 */
+        a:visited {
+            color: #ff5a60;
+        }
+        /* 已访问的链接 */
+        a:hover {
+            color: #ffd700;
+        }
+        /* 鼠标在链接上 */
+        a:active {
+            color: #fff;
+        }
+        /* 点击激活链接 */
+    </style>
+
+</body>
+</html>

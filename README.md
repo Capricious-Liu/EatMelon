@@ -1,2 +1,0 @@
-# EatMelon
-Database Project!!!!!!!!!
