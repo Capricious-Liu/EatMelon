@@ -37,23 +37,19 @@ namespace EatMelon.Controllers
         // GET: SearchProduct
         public ActionResult Index()
         {
-            userMes = TempData["UserMessage"] as UserMessage;
-
-
-
-
-            TempData["UserMessage"] = userMes;
             return View(Items);
         }
         [HttpPost]
         public ActionResult Index(string keyString)
         {
-            userMes = TempData["UserMessage"] as UserMessage;
+            userMes = Session["UserMessage"] as UserMessage;
 
             keyString = Request.Form["keyString"];
+
+            TempData["KeyString"] = keyString;
+
             SearchByName(keyString);
 
-            TempData["UserMessage"] = userMes;
             return View(Items);
         }
 

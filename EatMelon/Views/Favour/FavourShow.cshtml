@@ -1,0 +1,187 @@
+﻿@model IEnumerable<EatMelon.Controllers.ProductViewModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>收藏夹|吃瓜网|网上商城</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
+    <div>
+        <img src="images/logo.jpg">
+    </div>
+    <div id="main-wrapper">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <div class="logo"><h1>我的账号-收藏夹</h1></div>
+                <div id="linksbar">
+                    <!-- class=group>-->
+                    <ul>
+                        <li class="icon cart">
+                            <a class="trigger" href="shopping_cart.html">
+                                <!-- 跳转到购物车页面 -->
+                            </a> |
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="template-page-wrapper">
+            <div class="navbar-collapse collapse templatemo-sidebar">
+                <ul class="templatemo-sidebar-menu">
+                    <li><a href="aacount_index.html"><i class="fa fa-home"></i>账号主页</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-star"></i>收藏夹</a></li>
+                    <li><a href="maps.html"><i class="fa fa-file-text-o"></i>我的订单</a></li>
+                    <li><a href="tables.html"><i class="fa fa-users"></i>我的商店</a></li>
+                    <li><a href="preferences.html"><i class="fa fa-cog"></i>个人资料</a></li>
+                    <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>登出</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+
+            <div class="templatemo-content-wrapper">
+                <div class="templatemo-content">
+                    <h1>收藏夹</h1>
+                    <div class="templatemo-charts">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">按从晚到早的顺序显示</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive" align="center">
+                            <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>商铺名</th>
+                                        <th>商品名</th>
+                                        <th>商品图</th>
+                                        <th>收藏时间</th>
+                                        <th>取消订单</th>
+                                    </tr>
+                                </thead>
+
+
+
+
+
+
+
+
+
+
+
+                                <tbody>
+                                    @{
+                                        foreach (var modelItem in Model)
+                                        {
+                                            <tr>
+                                                <td><br><br><br>1</td>
+                                                <td><br><br><br><a href="shop_index.html">Xavier的小铺</a></td>
+                                                <td><br><br><br><a href="Details.html">@modelItem.NAME</a></td>
+                                                <td><img src="@modelItem.PICTURE"></td>
+                                                <td><br><br><br>@modelItem.PRICE</td>
+                                                <td><a href="#" class="btn btn-link"><br><br><br>删除</a></td>
+                                            </tr>
+                                        }
+                                    }
+
+
+                                    @*<tr>
+                                        <td><br><br><br>1</td>
+                                        <td><br><br><br><a href="shop_index.html">Xavier的小铺</a></td>
+                                        <td><br><br><br><a href="Details.html">X战警钱包</a></td>
+                                        <td><img src="images/favour/1.jpg"></td>
+                                        <td><br><br><br>2016.7.16</td>
+                                        <td><a href="#" class="btn btn-link"><br><br><br>删除</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br><br><br>2</td>
+                                        <td><br><br><br><a href="shop_index.html">凌美官方吃瓜店铺</a></td>
+                                        <td><br><br><br><a href="Details.html">【全球购认证】德国正品原装LAMY/凌美钢笔 safari狩猎者系列钢笔</a></td>
+                                        <td><img src="images/favour/2.jpg"></td>
+                                        <td><br><br><br>2016.7.14</td>
+                                        <td><a href="#" class="btn btn-link"><br><br><br>删除</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br><br><br>3</td>
+                                        <td><br><br><br><a href="shop_index.html">机械键盘集中营</a></td>
+                                        <td><br><br><br><a href="Details.html">现货 Qwerkywriter 复古机械键盘 蓝牙无线键盘 84键青轴 打字机</a></td>
+                                        <td><img src="images/favour/3.jpg"></td>
+                                        <td><br><br><br>2016.7.11</td>
+                                        <td><a href="#" class="btn btn-link"><br><br><br>删除</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br><br><br>4</td>
+                                        <td><br><br><br><a href="shop_index.html">猫咪原创手机壳小铺</a></td>
+                                        <td><br><br><br><a href="Details.html">苹果iPhone6s/plus/5s/se手机壳漫威美国队长冬兵俄语唤醒口令</a></td>
+                                        <td><img src="images/favour/4.jpg"></td>
+                                        <td><br><br><br>2016.7.11</td>
+                                        <td><a href="#" class="btn btn-link"><br><br><br>删除</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><br><br><br>5</td>
+                                        <td><br><br><br><a href="shop_index.html">吃瓜超市</a></td>
+                                        <td><br><br><br><a href="Details.html">丹夫 糕点 华夫饼（奶油味）168克/袋 蛋糕 零食</a></td>
+                                        <td><img src="images/favour/5.jpg"></td>
+                                        <td><br><br><br>2016.6.30</td>
+                                        <td><a href="#" class="btn btn-link"><br><br><br>删除</a></td>
+                                    </tr>*@
+                                </tbody>
+                            </table>
+                        </div>
+                        <ul class="pagination pull-right">
+                            <li class="disabled"><a href="#">&laquo;</a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">确定要登出您的账户吗？</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="sign-in.html" class="btn btn-primary">是的</a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">还是不了</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="templatemo-footer">
+                <div class="templatemo-copyright">
+                    <p>&copy; 吃瓜网 | 保留一切权利 </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/templatemo_script.js"></script>
+
+</body>
+</html>
