@@ -169,6 +169,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AccountIndexController.cs" />
+    <Compile Include="Controllers\CreateStoreController.cs" />
     <Compile Include="Controllers\FavourController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -180,12 +182,16 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Favours.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Manages.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Pro_pics.cs" />
+    <Compile Include="Models\Stores.cs" />
     <Compile Include="Models\TB_FAVORS.cs" />
+    <Compile Include="Models\TB_MANAGE.cs" />
     <Compile Include="Models\TB_PRODUCT.cs" />
     <Compile Include="Models\TB_PRO_PIC.cs" />
+    <Compile Include="Models\TB_STORE.cs" />
     <Compile Include="Models\TB_USER.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -320,6 +326,11 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\responsiveslides.min.js" />
+    <Content Include="Scripts\select\bootstrap.min.js" />
+    <Content Include="Scripts\select\distpicker.data.js" />
+    <Content Include="Scripts\select\distpicker.js" />
+    <Content Include="Scripts\select\jquery.min.js" />
+    <Content Include="Scripts\select\main.js" />
     <Content Include="Scripts\templatemo_script.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -361,6 +372,10 @@
     <Content Include="Views\RegisterAndLogin\register.cshtml" />
     <Content Include="Views\SearchProduct\Index.cshtml" />
     <Content Include="Views\Favour\FavourShow.cshtml" />
+    <Content Include="Scripts\select\.DS_Store" />
+    <Content Include="Views\AccountIndex\Index.cshtml" />
+    <Content Include="Views\CreateStore\MyShop.cshtml" />
+    <Content Include="Views\CreateStore\AddShop.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -27,8 +27,8 @@ namespace EatMelon.Controllers
         // GET: Favour
         public ActionResult FavourShow()
         {
-           // UserId = (Session["UserMessage"] as UserMessage).id;
-            UserId = 35;
+            UserId = (Session["UserMessage"] as UserMessage).id;
+            //UserId = 35;
             
             if (UserId == -1)
             {

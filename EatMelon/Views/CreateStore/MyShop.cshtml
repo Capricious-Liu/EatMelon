@@ -1,0 +1,158 @@
+﻿@model IEnumerable<EatMelon.Controllers.thismanagestore>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>我的账号|吃瓜网|网上商城</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
+    <div>
+        <img src="images/logo.jpg">
+    </div>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <div class="logo"><h1 style="font-family: 微软雅黑">我的账号-我的商店</h1></div>
+            <div id="linksbar">
+                <!-- class=group>-->
+                <li class="icon cart">
+                    <a class="trigger" href="shopping_cart.html">
+                        <!-- 跳转到购物车页面 -->
+                    </a> |
+                </li>
+                <li><a href="index.html">首页</a></li>
+            </div>
+        </div>
+    </div>
+    <div class="template-page-wrapper">
+        <div class="navbar-collapse collapse templatemo-sidebar">
+            <ul class="templatemo-sidebar-menu">
+                <li><a href="account_index.html"><i class="fa fa-home"></i>账号主页</a></li>
+                <li><a href="favours.html"><i class="fa fa-star"></i>收藏夹</a></li>
+                <li><a href="order.html"><i class="fa fa-file-text-o"></i>我的订单</a></li>
+                <li class="active"><a href="no_shop_own.html"><i class="fa fa-users"></i>我的商店</a></li>
+                <li><a href="preferences.html"><i class="fa fa-cog"></i>个人资料</a></li>
+                <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>登出</a></li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+
+        <div class="templatemo-content-wrapper">
+            <div class="templatemo-content">
+                <h1 style="font-family: 微软雅黑">我的商店</h1>
+                <div class="templatemo-panels">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 margin-bottom-30">
+                            <div class="panel panel-success">
+                                <div class="panel-heading" style="font-family: 微软雅黑">我拥有的商店</div>
+                                <div class="panel-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th style="font-family: 微软雅黑">商铺名</th>
+                                                <th style="font-family: 微软雅黑">创建时间</th>
+                                                <th style="font-family: 微软雅黑">关闭店铺</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                    <p style="font-family: 微软雅黑">您还没有店铺，快去<a href="create_store.html" style="font-family: 微软雅黑">创建</a>一个</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 margin-bottom-30">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading" style="font-family: 微软雅黑">我管理的店铺</div>
+                                <div class="panel-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th style="font-family: 微软雅黑">商铺名</th>
+                                                <th style="font-family: 微软雅黑">店主</th>
+                                                <th style="font-family: 微软雅黑">查看详情</th>
+                                                <th style="font-family: 微软雅黑">放弃权限</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @{
+                                                foreach (var storeItem in Model)
+                                                {
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>@storeItem.db_store.NAME</td>
+                                                        <td>Charles Xavier</td>@*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!店主名字!!!!!!!!!!!!!!!!!!!!!!!!!*@
+                                                        <td><a href="shop_control.html" class="btn btn-default">详情</a></td>@*!!!!!!!!!!!!!!!!!!!!!!!!!店铺链接!!!!!!!!!!!!!!!!!!!!!!!!!!!*@
+                                                        <td><a href="#" class="btn btn-link">删除</a></td>
+                                                    </tr>
+                                                }
+                                            }
+                                            @*<tr>
+                                                <td>1</td>
+                                                <td>Xavier的小铺</td>
+                                                <td>Charles Xavier</td>
+                                                <td>2014.7.16</td>
+                                                <td><a href="shop_control.html" class="btn btn-default">详情</a></td>
+                                                <td><a href="#" class="btn btn-link">删除</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>凌美官方吃瓜店铺</td>
+                                                <td>凌美官方</td>
+                                                <td>2013.7.14</td>
+                                                <td><a href="shop_control.html" class="btn btn-default">详情</a></td>
+                                                <td><a href="#" class="btn btn-link">删除</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>机械键盘集中营</td>
+                                                <td>苏黎世的猫</td>
+                                                <td>2012.7.11</td>
+                                                <td><a href="shop_control.html" class="btn btn-default">详情</a></td>
+                                                <td><a href="#" class="btn btn-link">删除</a></td>
+                                            </tr>*@
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">确定要登出您的账户吗？</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="login.html" class="btn btn-primary">是的</a>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">还是不了</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="templatemo-footer">
+            <div class="templatemo-copyright">
+                <p>&copy; 吃瓜网 | 保留一切权利 </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/account/jquery.min.js"></script>
+    <script src="js/account/bootstrap.min.js"></script>
+    <script src="js/account/Chart.min.js"></script>
+    <script src="js/account/templatemo_script.js"></script>
+</body>
+</html>
+
