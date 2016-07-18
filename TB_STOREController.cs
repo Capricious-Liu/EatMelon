@@ -108,6 +108,12 @@ namespace test2.Controllers
                         tb_store_type.TYPE = type;
                         db.TB_STORE_TYPE.Add(tb_store_type);
                         db.SaveChanges();
+                        TB_CHECK_STORE tb_chk_str = new TB_CHECK_STORE();
+                        tb_chk_str.S_ID = myStore.ID;
+                        tb_chk_str.A_ID = 1;
+                        tb_chk_str.STATE = "1";
+                        db.TB_CHECK_STORE.Add(tb_chk_str);
+                        db.SaveChanges();
                         return RedirectToAction("Index", new { id = cur_user });
                     }
                 }
