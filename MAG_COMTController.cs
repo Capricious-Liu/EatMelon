@@ -117,6 +117,7 @@ namespace test2.Controllers
                     }
                 }
             }
+            Session.Remove("list_tb_comt");
             return RedirectToAction("Index", new { uid = cur_uid, oid = cur_uid });
         }
     }
