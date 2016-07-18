@@ -22,7 +22,7 @@ namespace test2.Controllers
             List<TB_COMMENT> list_tb_comt = db.Database.SqlQuery<TB_COMMENT>(sql).ToList();
             foreach (TB_COMMENT tb_comt in list_tb_comt)
             {
-                if (tb_comt.U_ID == null)
+                if (tb_comt.DESCRIPTION == null)
                 {
                     tb_comt.ID = 0;
                     tb_comt.U_ID = cur_uid;
