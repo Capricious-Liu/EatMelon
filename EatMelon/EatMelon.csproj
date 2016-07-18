@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -200,8 +201,12 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cart_style.css" />
     <Content Include="Content\etalage.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\index_style.css" />
+    <Content Include="Content\log_style.css" />
+    <Content Include="Content\pay_style.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\templatemo_main.css" />
     <Content Include="favicon.ico" />
@@ -250,6 +255,21 @@
     <Content Include="images\kid-r-img1.jpg" />
     <Content Include="images\list-icon.png" />
     <Content Include="images\logo.jpg" />
+    <Content Include="images\log\address.png" />
+    <Content Include="images\log\banner.jpg" />
+    <Content Include="images\log\bg.jpg" />
+    <Content Include="images\log\bg1.jpg" />
+    <Content Include="images\log\bg2.jpg" />
+    <Content Include="images\log\bg3.jpg" />
+    <Content Include="images\log\bg_red.jpg" />
+    <Content Include="images\log\city.png" />
+    <Content Include="images\log\credit.png" />
+    <Content Include="images\log\dis.png" />
+    <Content Include="images\log\lock.png" />
+    <Content Include="images\log\person.png" />
+    <Content Include="images\log\phone.png" />
+    <Content Include="images\log\province.png" />
+    <Content Include="images\log\zipcode.png" />
     <Content Include="images\mail-icon.png" />
     <Content Include="images\man-r-img.jpg" />
     <Content Include="images\man-r-img1.jpg" />
@@ -310,10 +330,13 @@
     <Content Include="images\favour\Thumbs.db" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\distpicker.data.js" />
+    <Content Include="Scripts\distpicker.js" />
     <Content Include="Scripts\easing.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
     <Content Include="Scripts\jquery.etalage.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.responsiveTabs.js" />
@@ -321,6 +344,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\move-top.js" />
     <Content Include="Scripts\respond.js" />

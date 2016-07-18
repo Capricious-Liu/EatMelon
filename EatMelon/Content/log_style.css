@@ -1,0 +1,1544 @@
+/*--登录与注册界面的css--*/
+
+
+/*--- reset code ---*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	font:inherit;
+	vertical-align:baseline;
+}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol,ul {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+blockquote,q {
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:'';
+	content:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/* start editing from here */
+a {
+	text-decoration:none;
+}
+.txt-rt {
+	text-align:right;
+}/* text align right */
+.txt-lt {
+	text-align:left;
+}/* text align left */
+.txt-center {
+	text-align:center;
+/*-- W3Layouts --*/
+}/* text align center */
+.float-rt {
+	float:right;
+}/* float right */
+.float-lt {
+	float:left;
+}/* float left */
+.clear {
+	clear:both;
+}/* clear float */
+.pos-relative {
+	position:relative;
+}/* Position Relative */
+.pos-absolute {
+	position:absolute;
+}/* Position Absolute */
+.vertical-base {
+	vertical-align:baseline;
+}/* vertical align baseline */
+.vertical-top {
+	vertical-align:top;
+}/* vertical align top */
+nav.vertical ul li {
+	display:block;
+}/* vertical menu */
+nav.horizontal ul li {
+	display: inline-block;
+}/* horizontal menu */
+img {
+	max-width:100%;
+}
+
+/*--- end reset code ---*/
+
+body {
+	margin:0;
+	padding:0;
+	background:url(../images/log/bg3.jpg) no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	font-family: '微软雅黑', sans-serif;
+}
+.clear {
+	clear:both;
+}
+/*-- AgileITS --*/
+h1 {
+	text-align:center;
+	font-size:45px;
+	color:#fff;
+	padding:50px 0;
+	text-transform:uppercase;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+}
+.log1 .content1 h2 {
+	font-size:40px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.log2 .content2 h2 {
+	font-size:40px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.create_store .content h2 {
+	font-size:40px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.add_product .content3 h2 {
+	font-size:40px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.log1 .content1 p {
+	font-size:15px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.log2 .content2 p {
+	font-size:15px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.create_store .content p {
+	font-size:15px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.add_product .content3 p {
+	font-size:15px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+.log1 {
+	width:75%;
+	margin:0 auto;
+}
+.content1 {
+	width: 48%;
+	margin:0px 240px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 30px 0;
+    float: left;
+    border-radius: 0px;
+}
+.content1 input[type="text"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid #fff;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/person.png) no-repeat 440px 10px;
+	margin-top:4%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	/*-- W3Layouts --*/
+	border-radius: 4px;
+}
+.content1 input[type="password"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid #fff;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/lock.png) no-repeat 440px 10px;
+	margin-top:6%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.button-row {
+	width:100%;
+	margin-top:5%;
+	padding-bottom:40px;
+}
+.sign-in {
+	padding:10px;
+	background-color:#ff5a60;
+	width:35%;
+	border:none;
+	cursor:pointer;
+	color: #ebf5ff;
+	font-weight: 500;
+	font-family: '微软雅黑', sans-serif;
+	font-size:20px;
+	margin-left:62px;
+	float:left;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+.sign-in:hover {
+	background-color:#791F16;
+	color:#fff;
+}
+.reset {
+	padding:10px;
+	background-color:#ebf5ff;
+	width:35%;
+	border:none;
+	/*-- AgileITS --*/
+	cursor:pointer;
+	color:#ff5a60;
+	font-size:20px;
+	float:right;
+	margin-right:62px;
+	font-weight: 500;
+	font-family: '微软雅黑', sans-serif;
+	text-transform:uppercase;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+.reset:hover {
+	background-color:#791F16;
+	color:#fff;
+}
+.log2 {
+	width:75%;
+	margin:0 auto;
+}
+.content2 {
+	width:48%;
+	margin:0px 240px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.21);
+	padding: 30px 0 70px;
+  border-radius: 0px;
+}
+.content2 input[type="text"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/person.png) no-repeat 440px 10px;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content2 input[type="tel"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/phone.png) no-repeat 440px 10px;
+	margin-top:4%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content2 input[type="spec_adress"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/address.png) no-repeat 440px 10px;
+	margin-top:4%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content2 input[type="zipcode"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/zipcode.png) no-repeat 440px 10px;
+	margin-top:4%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content2 input[type="cred_no"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/credit.png) no-repeat 440px 10px;
+	margin-top:4%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content2 input[type="password"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:url(../images/log/lock.png) no-repeat 440px 10px;
+	margin-top:4%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.register {
+	padding:10px;
+	background-color:#ff5a60;
+	width:78%;
+	border:none;
+	cursor:pointer;
+	color:#dcecfc;
+	font-weight: 500;
+	font-family: '微软雅黑', sans-serif;
+	font-size:20px;
+	margin-top:7%;
+	text-transform:uppercase;
+	border-radius:4px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+.register:hover {
+	background-color:#791F16;
+	color:white;
+}
+.footer {
+	margin-top:3%;
+	padding:50px 0;
+	text-align:center;
+}
+.footer p {
+	color:#fff;
+	font-size:17px;
+	font-family: '微软雅黑', sans-serif;
+	font-weight: 300;
+	line-height:25px;
+}
+.footer a,a:active {
+	color:#fff;
+	text-decoration:none;
+	transition: all 0.5s ease-in-out;
+}
+.footer a:hover {
+	color:#c0392b;
+	transition: all 0.5s ease-in-out;
+}
+.create_store {
+	width:75%;
+	margin:0 auto;
+}
+.content {
+	width: 48%;
+	margin:0px 240px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 30px 0;
+    float: left;
+    border-radius: 0px;
+}
+.content input[type="store_name"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+
+.create {
+	padding:10px;
+	background-color:#ff5a60;
+	width:78%;
+	border:none;
+	cursor:pointer;
+	color:#dcecfc;
+	font-weight: 500;
+	font-family: '微软雅黑', sans-serif;
+	font-size:20px;
+	margin-top:7%;
+	text-transform:uppercase;
+	border-radius:4px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+.create:hover {
+	background-color:#791F16;
+	color:white;
+}
+
+.add_product {
+	width:75%;
+	margin:0 auto;
+}
+.content3 {
+	width: 48%;
+	margin:0px 240px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 30px 0;
+    float: left;
+    border-radius: 0px;
+}
+.content3 input[type="pro_name"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content3 input[type="pro_num"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content3 input[type="des_pic"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content3 textarea[type="describe"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.change {
+	padding:10px;
+	background-color:#ff5a60;
+	width:78%;
+	border:none;
+	cursor:pointer;
+	color:#dcecfc;
+	font-weight: 500;
+	font-family: '微软雅黑', sans-serif;
+	font-size:20px;
+	margin-top:7%;
+	text-transform:uppercase;
+	border-radius:4px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+.change:hover {
+	background-color:#791F16;
+	color:white;
+}
+
+/*-- responsive-mediaquries --*/
+@media(max-width:1920px){
+	.content1 input[type="text"] {
+	background: url(../images/log/person.png) no-repeat 500px 10px;
+	}
+	.content1 input[type="password"] {
+	background:url(../images/log/lock.png) no-repeat 500px 10px;
+	}
+	.sign-in {
+	margin-left:78px;
+	}
+	.reset {
+	margin-right:78px;
+	}
+	.content2 input[type="text"] {
+		background: url(../images/log/person.png) no-repeat 500px 10px;
+	}
+	.content2 input[type="tel"] {
+		    background: url(../images/log/phone.png) no-repeat 500px 10px;
+	}
+	.content2 input[type="spec_adress"] {
+		background: url(../images/log/address.png) no-repeat 500px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 500px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 500px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+		    background: url(../images/log/lock.png) no-repeat 500px 10px;
+	}
+}
+
+@media(max-width:1680px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 438px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 438px 10px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 438px 10px;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 438px 10px;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 438px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 438px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 438px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 438px 10px;
+	}
+	.sign-in {
+    margin-left: 65px;
+	}
+	.reset {
+	margin-right:65px;
+	}
+}
+
+@media(max-width:1600px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 418px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 418px 10px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 418px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 418px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 418px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 418px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 418px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 418px 10px;
+		background-size: 7% 60%;
+	}
+	.sign-in {
+    margin-left: 61px;
+}
+	.reset {
+	margin-right:61px;
+	}
+}
+
+@media (max-width: 1440px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 380px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 380px 10px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 380px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 380px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 380px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 380px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 380px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 380px 10px;
+		background-size: 7% 60%;
+	}
+	.sign-in {
+    margin-left: 52px;
+	}
+	.reset {
+	margin-right:52px;
+	}
+}
+
+@media (max-width: 1366px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 360px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 360px 10px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 360px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 360px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 360px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 360px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	  background: url(../images/log/credit.png) no-repeat 360px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 360px 10px;
+		background-size: 7% 60%;
+	}
+	.sign-in {
+    margin-left: 49px;
+	}
+	.reset {
+	margin-right:49px;
+}
+	.register {
+	width:395px;
+}
+}
+
+@media (max-width: 1280px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 338px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 338px 10px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 338px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 338px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 338px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 338px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 338px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 338px 10px;
+		background-size: 7% 60%;
+	}
+	.sign-in {
+    margin-left: 43px;
+}
+	.reset {
+	margin-right:43px;
+}
+	.register {
+    width: 373px;
+}
+}
+
+@media (max-width: 1080px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 288px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 288px 10px;
+	}
+	.sign-in {
+    margin-left: 33px;
+	}
+	.reset {
+    margin-right: 33px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 288px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 288px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 288px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 288px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 288px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 288px 10px;
+		background-size: 7% 60%;
+	}
+	h1 {
+	font-size:40px;
+	}
+	.log .content1 h2 , .log .content2 h2 {
+    font-size: 35px;
+	}
+	.register {
+    width: 320px;
+}
+}
+
+@media (max-width: 1050px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 280px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 280px 10px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 280px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 280px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 280px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 280px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	  background: url(../images/log/credit.png) no-repeat 280px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 280px 10px;
+		background-size: 7% 60%;
+	}
+	.register {
+    width: 315px;
+}
+}
+
+@media (max-width: 1024px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 370px 10px;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 370px 10px;
+	}
+	.sign-in {
+    margin-left:30px;
+	}
+	.reset {
+    margin-right:30px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 370px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 370px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 370px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 370px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 370px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 370px 10px;
+		background-size: 7% 60%;
+	}
+	.button-row {
+	padding:25px 0;
+	}
+	.register {
+    width: 304px;
+	}
+	.log .content1 h2, .log .content2 h2 {
+    font-size: 30px;
+    padding: 15px 0;
+}
+}
+
+@media (max-width: 991px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 260px 10px;
+		background-size: 7% 60%;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 260px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 260px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 260px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 260px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 260px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 260px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 260px 10px;
+		background-size: 7% 60%;
+	}
+	.register {
+    width: 295px;
+}
+}
+
+@media (max-width: 900px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 240px 10px;
+		background-size: 7% 60%;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 240px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 240px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 240px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 240px 10px;
+		background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 240px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 240px 10px;
+			background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 240px 10px;
+		background-size: 7% 60%;
+	}
+	.register {
+    width: 274px;
+	}
+	.button-row {
+    padding: 10px 0;
+	}
+	.sign-in {
+    margin-left: 23px;
+	}
+	.reset {
+    margin-right: 23px;
+	}
+	.content2 {
+	padding:30px 0 50px;
+	}
+}
+
+@media (max-width: 800px){
+	.content1 input[type="text"] {
+	background: url(../images/log/person.png) no-repeat 245px 10px;
+    font-size: 16px;
+    background-size: 7% 60%;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 245px 10px;
+	font-size: 16px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 245px 10px;
+	font-size: 16px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 245px 10px;
+	font-size: 16px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 245px 10px;
+	font-size: 16px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 245px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 245px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 245px 10px;
+	font-size: 16px;
+	background-size: 7% 60%;
+	}
+	.log {
+    width: 85%;
+	}
+	h1 {
+    font-size: 35px;
+	}
+	.log .content1 h2, .log .content2 h2 {
+    font-size: 27px;
+	}
+}
+
+@media (max-width: 768px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 240px 10px;
+	background-size: 7% 60%;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 240px 10px;
+	background-size: 7% 60%;
+	}
+	.sign-in {
+    margin-left:22px;
+	font-size: 16px;
+	}
+	.reset {
+    margin-right:22px;
+	font-size: 16px;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 240px 10px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 240px 10px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 240px 10px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 240px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 240px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 240px 10px;
+	background-size: 7% 60%;
+	}
+	.register {
+    width: 270px;
+	font-size: 16px;
+	}
+	.footer p {
+	font-size:16px;
+	}
+	.log {
+	margin:0 auto 50px;
+	}
+}
+
+@media (max-width: 736px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 332px 10px;
+	background-size: 7% 60%;
+	}
+	.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 332px 10px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 332px 10px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 332px 10px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 332px 10px;
+	background-size: 7% 60%;
+	}
+	.content2 input[type="zipcode"] {
+	    background: url(../images/log/zipcode.png) no-repeat 332px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="cred_no"] {
+	    background: url(../images/log/credit.png) no-repeat 332px 10px;
+	    background-size: 7% 60%;
+	}
+	.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 332px 10px;
+	background-size: 7% 60%;
+	}
+	.log {
+    width: 100%;
+	}
+	.content1{
+	width:63%;
+	float:none;
+	margin:0 auto;
+	}
+	.content1 p {
+    margin-left: 31%;
+	}
+	.content2{
+	width:63%;
+	float:none;
+	margin: 50px auto 0;
+	}
+	h1 {
+	padding:35px 0;
+	}
+	.sign-in {
+    margin-left: 43px;
+	}
+	.reset {
+    margin-right: 43px;
+	}
+	.register {
+    width: 370px;
+	}
+}
+
+@media (max-width: 667px){
+	.content1 {
+    width: 70%;
+	}
+	.sign-in {
+    margin-left: 45px;
+    width: 120px;
+	}
+	.reset {
+    margin-right: 45px;
+    width: 120px;
+	}
+	.content2{
+	width:70%;
+	}
+}
+
+@media (max-width: 640px){
+	.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="zipcode"] {
+    background: url(../images/log/zipcode.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="cred_no"] {
+    background: url(../images/log/credit.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 322px 10px;
+    background-size: 7% 60%;
+}
+	.content1 {
+    width: 70%;
+	}
+	.sign-in {
+    margin-left:41px;
+	}
+	.reset {
+    margin-right:41px;
+	}
+	.register{
+	width:82%;
+	}
+}
+
+@media (max-width: 600px){
+.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="zipcode"] {
+    background: url(../images/log/zipcode.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="cred_no"] {
+    background: url(../images/log/credit.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 304px 10px;
+    background-size: 7% 60%;
+}
+.sign-in {
+    margin-left: 37px;
+}
+.reset {
+    margin-right: 37px;
+}
+h1 {
+    font-size: 30px;
+}
+}
+
+@media (max-width: 568px){
+	h1 {
+    padding: 25px 0;
+	}
+	.log .content1 h2, .log .content2 h2 {
+    font-size: 30px;
+    padding: 5px 0 15px;
+}
+.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="zipcode"] {
+    background: url(../images/log/zipcode.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="cred_no"] {
+    background: url(../images/log/credit.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 287px 10px;
+    background-size: 7% 60%;
+}
+.sign-in {
+    margin-left: 33px;
+}
+.reset {
+    margin-right: 33px;
+}
+.register {
+    width: 83%;
+}
+}
+
+@media (max-width: 480px){
+	.content1 , .content2 {
+    width: 80%;
+}
+.content1 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.content1 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="text"] {
+    background: url(../images/log/person.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="tel"] {
+    background: url(../images/log/phone.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="spec_adress"] {
+    background: url(../images/log/address.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="zipcode"] {
+    background: url(../images/log/zipcode.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="cred_no"] {
+    background: url(../images/log/credit.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.content2 input[type="password"] {
+    background: url(../images/log/lock.png) no-repeat 280px 10px;
+    background-size: 7% 60%;
+}
+.sign-in {
+    margin-left: 32px;
+}
+.reset {
+    margin-right: 32px;
+}
+.log {
+    margin: 0 auto;
+}
+.footer {
+	padding: 50px 20px;
+}
+}
+
+@media (max-width: 480px){
+	.content {
+    width: 80%;
+}
+.create {
+    margin-left: 32px;
+}
+.create_store {
+    margin: 0 auto;
+}
+.footer {
+	padding: 50px 20px;
+}
+}
+
+@media (max-width:414px){
+	h1 {
+    font-size: 28px;
+}
+.log .content1 h2, .log .content2 h2, .create_store .content h2 {
+    font-size: 27px;
+}
+.sign-in {
+    margin-left: 22px;
+}
+.reset {
+    margin-right: 22px;
+}
+.register {
+    width: 86%;
+}
+.create {
+    width: 87%;
+}
+}
+
+@media (max-width: 384px){
+	.sign-in {
+    margin-left: 19px;
+}
+.reset {
+    margin-right: 19px;
+}
+.register {
+    width: 87%;
+}
+.create {
+    width: 87%;
+}
+}
+
+@media (max-width: 375px){
+  h1 {
+    font-size: 26px;
+}
+.log .content1 h2, .log .content2 h2, .create_store .content h2 {
+    font-size: 25px;
+}
+}
+
+@media (max-width: 320px){
+	h1 {
+    font-size: 24px;
+}
+.content1, .content2, .content{
+    width: 85%;
+}
+.content1 input[type="text"] {
+	width: 65%;
+	background: url(../images/log/person.png) no-repeat 191px 10px;
+  background-size: 7% 60%;
+	font-size: 14px;
+}
+.content1 input[type="password"] {
+	width:65%;
+	background: url(../images/log/lock.png) no-repeat 191px 10px;
+    background-size: 7% 60%;
+	font-size: 14px;
+}
+.content2 input[type="text"] {
+	width:65%;
+	background: url(../images/log/person.png) no-repeat 191px 10px;
+    background-size: 7% 60%;
+	font-size: 14px;
+}
+.content2 input[type="tel"] {
+	margin-top: 6%;
+	width:65%;
+	background: url(../images/log/phone.png) no-repeat 191px 10px;
+    background-size: 7% 60%;
+	font-size: 14px;
+}
+.content2 input[type="spec_adress"] {
+	margin-top: 6%;
+	width:65%;
+	background: url(../images/log/address.png) no-repeat 191px 10px;
+  background-size: 7% 60%;
+	font-size: 14px;
+}
+.content2 input[type="zipcode"] {
+	margin-top: 6%;
+	width:65%;
+	background: url(../images/log/zipcode.png) no-repeat 191px 10px;
+    background-size: 7% 60%;
+	font-size: 14px;
+}
+.content2 input[type="cred_no"] {
+	margin-top: 6%;
+	width:65%;
+	background: url(../images/log/credit.png) no-repeat 191px 10px;
+  background-size: 7% 60%;
+	font-size: 14px;
+}
+.content2 input[type="password"] {
+	margin-top: 6%;
+	width:65%;
+	background: url(../images/log/lock.png) no-repeat 191px 10px;
+  background-size: 7% 60%;
+	font-size: 14px;
+}
+.content input[type="store_name"] {
+	margin-top: 6%;
+	width:65%;
+	font-size: 14px;
+}
+
+.log .content1 h2, .log .content2 h2, .create_store .content h2 {
+    font-size: 23px;
+}
+.sign-in , .reset , {
+    font-size: 15px;
+	width: 87px;
+}
+.footer p {
+    font-size: 14px;
+}
+}
+
+.form-control {
+    display: inline;
+		margin-top: 5%;
+    width: 25%;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+.form-control-store {
+    display: inline;
+		margin-top: 5%;
+    width: 80%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
