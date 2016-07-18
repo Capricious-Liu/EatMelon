@@ -124,6 +124,13 @@ namespace test2.Controllers
                 tb_pic.PICTURE = picture;
                 db.TB_PRO_PIC.Add(tb_pic);
                 db.SaveChanges();
+                TB_CHECK_PRODUCT tb_chk_pro = new TB_CHECK_PRODUCT();
+                tb_chk_pro.S_ID = tb_pro.S_ID;
+                tb_chk_pro.P_ID = tb_pro.ID;
+                tb_chk_pro.A_ID = 1;
+                tb_chk_pro.STATE = "1";
+                db.TB_CHECK_PRODUCT.Add(tb_chk_pro);
+                db.SaveChanges();
                 return RedirectToAction("Index", new { id = cur_store });
             }
             return View();
