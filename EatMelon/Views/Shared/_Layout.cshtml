@@ -60,19 +60,12 @@
     <div class="container">
         <!----top-header---->
         <div class="top-header">
-            <div class="logo">
+            <div class="logo" >
 
-                <a href="index.html"><img src="~/images/logo.jpg" title="barndlogo" /></a>
+                <a href="~/Views/Home/Index"><img src= @Url.Content("~/images/logo.jpg") title="barndlogo" /></a>
 
             </div>
             <br>
-            
-
-
-
-
-
-
             <!--这里是登陆以后的代码  这里是登陆以后的代码  这里是登陆以后的代码 ！-->
             <div class="top-header-info">
 
@@ -171,11 +164,9 @@
 
             <div class="footer">
                 <div class="container">
-                    <div class="col-md-3 footer-logo">
+                    <div class="col-md-3 footer-logo" >       @*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!为什么不用返回上级目录!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*@
 
-
-                        <img src="images/flogo.png"/>              @*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!为什么不用返回上级目录!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*@
-                    
+                        <img src=@Url.Content("~/images/flogo.png") />
                     </div>
 
 
