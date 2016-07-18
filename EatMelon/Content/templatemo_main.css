@@ -18,7 +18,7 @@
 
 /* 2. General Styles
 --------------------------------------- */
-* { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+* { font-family: "微软雅黑","HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 body { background-color: rgb(235,235,235); }
 h1 { font-size: 24px; }
 .btn a {
@@ -220,7 +220,7 @@ h1 { font-size: 24px; }
 }
 #linksbar li { float:left; }
 #linksbar li a { padding:10px 20px 10px 0px; font-size:200;}
-#linksbar li, #linksbar li a { display:inline-block; color:#fff; font-size:1em; font-family:'Droid Sans'; line-height:16px; }
+#linksbar li, #linksbar li a { display:inline-block; color:#fff; font-size:1em; font-family:'微软雅黑'; line-height:16px; }
 #linksbar li a:hover { color:#b9b8b8; }
 #linksbar .basketpopup { display:none; }
 #linksbar li.icon { padding-left:20px; background:8px center no-repeat; }
@@ -252,8 +252,46 @@ h1 { font-size: 24px; }
 .form-control-search {
    display: inline;
    padding: 1%;
-   margin-left: 600px;
+   margin-left: 750px;
    width: 14%;
+   height: 34px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #000;
+   background-color: transparent;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.form-control-store {
+    display: inline;
+		margin-top: 2%;
+    width: 80%;
+    height: 40px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+
+.form-control-input {
+   display: inline;
+   margin-top: 2%;
+   margin-left: 2%;
+   padding: 0 2em;
+   width: 80%;
    height: 34px;
    font-size: 14px;
    line-height: 1.42857143;
