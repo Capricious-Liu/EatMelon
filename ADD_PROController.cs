@@ -69,7 +69,7 @@ namespace test2.Controllers
         }
 
         // POST: ADD_PRO/Create
-        [HttpPost]
+        /*[HttpPost]
         public ActionResult Create(decimal cur_store, string picture, [Bind(Include = "ID,NAME,NUM,PRICE,TYPE,DESCRIPTION,DISCOUNT_RATE")] TB_PRODUCT tb_pro, TB_PRO_PIC tb_pic)
         {
             tb_pro.S_ID = cur_store;
@@ -93,7 +93,42 @@ namespace test2.Controllers
                 return RedirectToAction("Index", new { id = cur_store });
             }
             return View();
-        }
+        }*/
+
+        [HttpPost]
+        public ActionResult Create(decimal cur_store, string picture, [Bind(Include = "NAME,NUM,PRICE,TYPE,DESCRIPTION,DISCOUNT_RATE")] TB_PRODUCT tb_pro, TB_PRO_PIC tb_pic)
+        {
+            tb_pro.S_ID = cur_store;
+            picture = Request.Form[("PICTURE")];
+            if (ModelState.IsValid)
+            {
+                foreach (TB_PRODUCT myPro in db.TB_PRODUCT)
+                {
+                    if (myPro.S_ID == tb_pro.S_ID && myPro.NAME == tb_pro.NAME)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                }
+                db.TB_PRODUCT.Add(tb_pro);
+                db.SaveChanges();
+                foreach (TB_PRODUCT myPro in db.TB_PRODUCT)
+                {
+                    if (myPro.S_ID == tb_pro.S_ID && myPro.NAME == tb_pro.NAME)
+                    {
+                        tb_pro = myPro;
+                        break;
+                    }
+                }
+                tb_pic.S_ID = tb_pro.S_ID;
+                tb_pic.P_ID = tb_pro.ID;
+                tb_pic.PICTURE = picture;
+                db.TB_PRO_PIC.Add(tb_pic);
+                db.SaveChanges();
+                return RedirectToAction("Index", new { id = cur_store });
+            }
+            return View();
+        }    //商店ID和商品姓名为候选码
+        
 
         // GET: ADD_PRO/Create
         public ActionResult Edit(decimal cur_sid, decimal cur_pid)
