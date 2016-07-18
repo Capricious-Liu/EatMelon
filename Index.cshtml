@@ -1,0 +1,40 @@
+﻿@model IEnumerable<test3.Models.TB_COMMENT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    <table class="table">
+        @{
+            int i = 0;
+            foreach (var item in Session["list_tb_comt"] as List<test3.Models.TB_COMMENT>)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.S_ID);
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.P_ID)
+                </td>
+                <td>
+                    @{string tstring1 = "rank" + i.ToString(); }
+                    <input type = "number" name = @tstring1 value = @item.RANK />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @{string tstring2 = "description" + i.ToString(); }
+                    <input type="text" name=@tstring2 value=@item.DESCRIPTION />
+                </td>
+            </tr>
+                i = i + 1;
+            }
+        }
+    </table>
+
+    <input type="submit" value="提交" class="btn btn-default" />
+}
