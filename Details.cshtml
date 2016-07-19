@@ -1,0 +1,379 @@
+﻿@model EatMelon.Controllers.ProductMessage
+
+@{
+    Layout = null;
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Details</title>
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/index/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="css/index_style.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="js/index/move-top.js"></script>
+    <script type="text/javascript" src="js/index/easing.js"></script>
+    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+    </script>
+    <!---- start-smoth-scrolling---->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
+    <!----webfonts--->
+    <!---//webfonts--->
+    <!----start-top-nav-script---->
+    <script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+    </script>
+    <!----//End-top-nav-script---->
+</head>
+<body>    
+    @using (Html.BeginForm())
+    {
+    <!----container---->
+    <div class="container">
+        <!----top-header---->
+        <div class="top-header">
+            <div class="logo">
+                <a href="index.html"><img src="images/index/logo.jpg" title="barndlogo" /></a>
+            </div>
+            <br>
+            <!--这里是登陆以后的代码  这里是登陆以后的代码  这里是登陆以后的代码 ！-->
+            <div class="top-header-info">
+                <!--<div class="top-contact-info">
+                    <div class="top-contact-info">
+                        <ul class="unstyled-list list-inline">
+                            <li style="font-family: 微软雅黑"><span class="phone"> </span>你好,<a href="personalPage">我的名字!</a></li>
+                            <li style="font-family: 微软雅黑"><a href="cartPage"><span class="mail"> </span></a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                </div>-->
+                <div class="cart-details">
+                    <div class="add-to-cart">
+                        <ul class="unstyled-list list-inline">
+                            <li>
+                                <span class="cart"> </span>
+                                <ul class="cart-sub">
+                                    <li><p>0 Products</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-rigister">
+                        <ul class="unstyled-list list-inline">
+                            <li><a class="login" href="login.html" style="font-family: 微软雅黑">登录</a></li>
+                            <li><a class="rigister" href="#" style="font-family: 微软雅黑">注册 <span> </span></a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!----//top-header---->
+        <div class="top-header-nav">
+            <!----start-top-nav---->
+            <nav class="top-nav main-menu">
+                <ul class="top-nav">
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">商品 </a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">店铺</a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">品牌</a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">联系</a><span> </span></li>
+                    <li><a href="products.html" style="font-family: 微软雅黑;color: #ff5a60">关于我们</a><span> </span></li>
+
+                    <div class="clearfix"> </div>
+                </ul>
+                <a href="#" id="pull"><img src="images/index/nav-icon.png" title="menu" /></a>
+            </nav>
+            <!----End-top-nav---->
+            <!---top-header-search-box--->
+            <!----content---->
+            <div class="clearfix"> </div>
+            </ul>
+            </nav>
+            <!----End-top-nav---->
+            <!---top-header-search-box--->
+            <div class="top-header-search-box">
+                <form>
+                    <input type="text" placeholder="Search" required / maxlength="22">
+                    <input type="submit" value=" ">
+                </form>
+            </div>
+            <!---top-header-search-box--->
+            <div class="clearfix"> </div>
+
+        </div>
+        <div class="clearfix"> </div>
+        <!--//top-header-nav---->
+        <!----content---->
+        <div class="content">
+
+            <!-- //products ---->
+            <!----product-details--->
+            <div class="product-details">
+                <div class="container">
+                    <div class="product-details-row1">
+                        <div class="product-details-row1-head">
+                            <h2 style="font-family: 微软雅黑;color: #ff5a60">@Model.name</h2>
+                            <br>
+                            <a href="店铺的界面.html"><p style="font-family: 微软雅黑">@Model.store_name</p></a>
+                        </div>
+                        <div class="col-md-4 product-details-row1-col1">
+                            <!----details-product-slider--->
+                            <!-- Include the Etalage files -->
+                            <link rel="stylesheet" href="css/etalage.css">
+                            <script src="js/index/jquery.etalage.min.js"></script>
+                            <!-- Include the Etalage files -->
+                            <script>
+								jQuery(document).ready(function($){
+
+									$('#etalage').etalage({
+										thumb_image_width: 300,
+										thumb_image_height: 400,
+										source_image_width: 900,
+										source_image_height: 1000,
+										show_hint: true,
+										click_callback: function(image_anchor, instance_id){
+											alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+										}
+									});
+									// This is for the dropdown list example:
+									$('.dropdownlist').change(function(){
+										etalage_show( $(this).find('option:selected').attr('class') );
+									});
+
+								});
+                            </script>
+                            <!----//details-product-slider--->
+                            <div class="details-left">
+                                <div class="details-left-slider">
+                                    <ul id="etalage">
+                                        <li>
+                                            <a href="optionallink.html">
+                                                <img class="etalage_thumb_image" src="images/index/product-slide/image1_thumb.jpg" />
+                                                <img class="etalage_source_image" src="images/index/product-slide/image1_large.jpg" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <img class="etalage_thumb_image" src="images/index/product-slide/image2_thumb.jpg" />
+                                            <img class="etalage_source_image" src="images/index/product-slide/image2_large.jpg" />
+                                        </li>
+                                        <li>
+                                            <img class="etalage_thumb_image" src="images/index/product-slide/image3_thumb.jpg" />
+                                            <img class="etalage_source_image" src="images/index/product-slide/image3_large.jpg" />
+                                        </li>
+                                        <li>
+                                            <img class="etalage_thumb_image" src="images/index/product-slide/image4_thumb.jpg" />
+                                            <img class="etalage_source_image" src="images/index/product-slide/image4_large.jpg" />
+                                        </li>
+                                        <li>
+                                            <img class="etalage_thumb_image" src="images/index/product-slide/image5_thumb.jpg" />
+                                            <img class="etalage_source_image" src="images/index/product-slide/image5_large.jpg" />
+                                        </li>
+                                        <li>
+                                            <img class="etalage_thumb_image" src="images/index/product-slide/image6_thumb.jpg" />
+                                            <img class="etalage_source_image" src="images/index/product-slide/image6_large.jpg" />
+                                        </li>
+                                        <li>
+                                            <img class="etalage_thumb_image" src="images/index/product-slide/image7_thumb.jpg" />
+                                            <img class="etalage_source_image" src="images/index/product-slide/image7_large.jpg" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 product-details-row1-col2">
+
+                            <div class="product-price">
+                                <div class="product-price-left text-right">
+                                    <span>￥@Model.price</span>
+                                    <h5>￥@Model.new_price</h5>
+                                </div>
+                                <div class="product-price-right">
+                                    <a href="#"><span> </span></a>
+                                    <label> save <b>@Model.discount %</b></label>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="product-price-details">
+                                <p class="text-right" style="font-family: 微软雅黑">@Model.description</p>
+                                <a class="shipping" href="#" style="font-family: 微软雅黑"><span> </span>包邮</a>
+                                <div class="clearfix"> </div>
+                                <div class="product-size-qty">
+                                    <form action="/test.php" method="get" style="font-family: 微软雅黑">
+                                        数量: <input type="number" name="points" min="1" max= "@Model.num" /><!--讲道理这里的max需要等于改商品目前的库存量-->
+                                        <!--<input type="submit" />-->
+                                    </form>
+                                </div>
+                                <div class="clearfix"> </div>
+                                <div class="product-cart-share">
+                                    <div class="add-cart-btn">
+                                        <input type="button" style="color: black;font-family: 微软雅黑" value="加入到购物车" /><input style="font-family: 微软雅黑" type="button" value="现在购买" />
+                                    </div>
+                                    <ul class="product-share text-right">
+                                        <h3 style="font-family: 微软雅黑">收藏这个宝贝 :<img onmousedown="this.src='images/index/like1.jpg'" style="float: right" src="images/index/like.png"></h3>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <!--//product-details--->
+                    </div>
+                    <!---- product-details ---->
+                    <div class="product-tabs">
+                        <!--Horizontal Tab-->
+                        <div id="horizontalTab">
+                            <ul>
+                                <li style="font-family: 微软雅黑"><a href="#tab-1">商品描述细节</a></li>
+                                <li style="font-family: 微软雅黑"><a href="#tab-2">评论</a></li>
+
+                            </ul>
+                            <div id="tab-1" class="product-complete-info">
+                                <h3 style="font-family: 微软雅黑">商品的描述</h3>
+                                <p style="font-family: 微软雅黑">描述啊描述啊描述啊描述啊</p>
+                                <span style="font-family: 微软雅黑">描述啊</span>
+                                <div class="product-fea">
+                                    <p style="font-family: 微软雅黑">描述啊描述</p>
+
+                                </div>
+                            </div>
+                            <div id="tab-2" class="product-complete-info">
+                                <h3 style="font-family: 微软雅黑">来看看购买过的吃瓜群众怎么说:</h3>
+
+                                <span style="font-family: 微软雅黑">吃瓜用户1</span>12323455666(用户编码)<span style="font-family: 微软雅黑;color: #ff5a60">5个瓜(等级)</span>
+                                <div class="product-fea">
+                                    <p>好评啊666啊大河向东流啊</p>
+                                </div>
+
+                                <span style="font-family: 微软雅黑">吃瓜用户2</span>12323455666(用户编码)<span style="font-family: 微软雅黑;color: #ff5a60">4个瓜(等级)</span>
+                                <div class="product-fea">
+                                    <p>好评啊666啊大河向东流啊好评啊666啊大河向东流啊好评啊666啊大河向东流啊好评啊666啊大河向东流啊</p>
+                                </div>
+
+                                <span style="font-family: 微软雅黑">吃瓜用户2</span>12323455666(用户编码)<span style="font-family: 微软雅黑;color: #ff5a60">3个瓜(等级)</span>
+                                <div class="product-fea">
+                                    <p>好评啊666啊大河向东流啊好评啊666啊大河向东流啊好评啊666啊大河向东流啊好评啊666啊大河向东流啊</p>
+                                </div>
+
+                                <span style="font-family: 微软雅黑">吃瓜用户2</span>12323455666(用户编码)<span style="font-family: 微软雅黑;color: #ff5a60">4个瓜(等级)</span>
+                                <div class="product-fea">
+                                    <p>好评啊666啊大河向东流啊好评啊666啊大河向东流啊好评啊666啊大河向东</p>
+                                </div>
+                            </div>
+
+                            </div>
+                        
+                        <!-- Responsive Tabs JS -->
+                        <script src="js/index/jquery.responsiveTabs.js" type="text/javascript"></script>
+
+                        <script type="text/javascript">
+								$(document).ready(function () {
+									$('#horizontalTab').responsiveTabs({
+										rotate: false,
+										startCollapsed: 'accordion',
+										collapsible: 'accordion',
+										setHash: true,
+										disabled: [3,4],
+										activate: function(e, tab) {
+											$('.info').html('Tab <strong>' + tab.id + '</strong> activated!');
+										}
+									});
+
+									$('#start-rotation').on('click', function() {
+										$('#horizontalTab').responsiveTabs('active');
+									});
+									$('#stop-rotation').on('click', function() {
+										$('#horizontalTab').responsiveTabs('stopRotation');
+									});
+									$('#start-rotation').on('click', function() {
+										$('#horizontalTab').responsiveTabs('active');
+									});
+									$('.select-tab').on('click', function() {
+										$('#horizontalTab').responsiveTabs('activate', $(this).val());
+									});
+
+								});
+                        </script>
+                    </div>
+                    <!-- //product-details ---->
+                </div>
+            </div>
+            </div>
+            <!----content---->
+            <div class="clearfix"> </div>
+            <!----footer--->
+            <div class="footer">
+                <div class="container">
+                    <div class="col-md-3 footer-logo">
+                        <a href="index.html"><img src="images/index/flogo.png" title="brand-logo" /></a>
+                    </div>
+                    <div class="col-md-7 footer-links">
+                        <ul class="unstyled-list list-inline1">
+                            <li style="font-family: 微软雅黑;font-size: larger;color: white">&copy;吃瓜网 | 保持一切权力</li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+            <!---//footer--->
+            <!---copy-right--->
+            <div class="copy-right">
+                <div class="container">
+
+                    <script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear'
+								 		};
+										*/
+
+										$().UItoTop({ easingType: 'easeOutQuart' });
+
+									});
+                    </script>
+                    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+                </div>
+            </div>
+            <!--//copy-right--->
+        </div>
+        <!----container---->
+        </div>
+        </div>
+    }
+</body>
+</html>
+
+
