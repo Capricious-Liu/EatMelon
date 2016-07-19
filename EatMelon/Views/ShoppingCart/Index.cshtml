@@ -1,0 +1,169 @@
+﻿@model IEnumerable<EatMelon.Controllers.OrderItemViewModel>
+
+@{
+    Layout = null;
+}
+
+@{
+    var storeIDecimals = new List<int>();
+    foreach (var modelItem in Model)
+    {
+        if (!storeIDecimals.Contains(modelItem.S_ID))
+        {
+            storeIDecimals.Add(modelItem.S_ID);
+        }
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的购物车|吃瓜网|网上商城</title>
+
+    <!-- For-Mobile-Apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="电商,网上商城,吃瓜网" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //For-Mobile-Apps -->
+    <!-- Custom-Theme-Files -->
+    <link rel="stylesheet" href="~/Content/cart_style.css" type="text/css" media="all" />
+    <!-- //Custom-Theme-Files -->
+    <!-- Remove-Item-JavaScript -->
+    <script type="text/javascript" src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script>
+$(document).ready(function(c) {
+		$('.alert-close1').on('click', function(c){
+			$('.close1').fadeOut('slow', function(c){
+		  		$('.close1').remove();
+			});
+		});
+	});
+    </script>
+    <script>
+$(document).ready(function(c) {
+		$('.alert-close2').on('click', function(c){
+			$('.close2').fadeOut('slow', function(c){
+		  		$('.close2').remove();
+			});
+		});
+	});
+    </script>
+    <script>
+$(document).ready(function(c) {
+		$('.alert-close3').on('click', function(c){
+			$('.close3').fadeOut('slow', function(c){
+		  		$('.close3').remove();
+			});
+		});
+	});
+    </script>
+    <!-- //Remove-Item-JavaScript -->
+
+</head>
+
+<!-- Body-Starts-Here -->
+<body>
+
+    <h1 style="font-family:'微软雅黑';">我的购物车</h1>
+
+    <!-- Content-Starts-Here -->
+    <div class="container">
+        @{
+            foreach (var storeId in storeIDecimals)
+            {
+                var totalPrice = (from orderItem in Model
+                                  where orderItem.S_ID == storeId
+                                  where orderItem.TOTAL_PRICE != null
+                                  select (decimal)orderItem.TOTAL_PRICE).FirstOrDefault();
+
+                <!-- Mainbar-Starts-Here -->
+                <div class="main-bar">
+                    <div class="product">
+                        <h3 style="font-family: '微软雅黑';">商品</h3>
+                    </div>
+                    <div class="quantity">
+                        <h3 style="font-family: '微软雅黑';">数量</h3>
+                    </div>
+                    <div class="price">
+                        <h3 style="font-family: '微软雅黑';">价格</h3>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- //Mainbar-Ends-Here -->
+                <!-- Items-Starts-Here -->
+                <div class="items">
+
+                    @{
+                var i = 0;
+                foreach (var orderItem in Model)
+                {
+                    if (orderItem.S_ID != storeId)
+                    {
+                        continue;
+                    }
+                    ++i;
+                    <div class="item@(i)">
+                        <div class="close@(i)">
+                            <!-- Remove-Item -->
+                            <a href="~/ShoppingCart/Delete?O_ID=@orderItem.ID">
+                                <div class="alert-close@(i)"> </div>
+                            </a><!-- //Remove-Item -->
+                                <div class="image@(i)">
+                                    <img src="@orderItem.PICTURE" alt="ITEM@(i)">
+                                </div>
+                                <div class="title@(i)">
+                                    <p style="font-family: '微软雅黑';">@orderItem.NAME</p>
+                                </div>
+                                <div class="quantity@(i)">
+                                    <form action=#>
+                                        <input type="number" name="quantity" min="1" max="10" value="1">
+                                    </form>
+                                </div>
+                                <div class="price@(i)">
+                                    <p style="font-family: '微软雅黑';">￥ @orderItem.PRICE</p>
+                                </div>
+                                <div class="clear"></div>
+</div>
+                    </div>
+                }
+                    }
+
+                    <!-- Total-Price-Starts-Here -->
+                    <div class="total">
+                        <div class="total1" style="font-family: '微软雅黑';">总价</div>
+                        <div class="total2" style="font-family: '微软雅黑';">￥ @(totalPrice)</div>
+                        <div class="clear"></div>
+                    </div>
+
+
+                    <!-- //Total-Price-Ends-Here -->
+                    <!-- Checkout-Starts-Here -->
+                    <div class="checkout">
+                        <div class="discount" style="font-family: '微软雅黑';">
+                            <span>提供折扣码</span> <input type="text">
+                        </div>
+                        <div class="add" style="font-family: '微软雅黑';">
+                            <a href="#">添加到购物车</a>
+                        </div>
+                        <div class="checkout-btn">
+                            <a href="#">提交订单</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!-- //Checkout-Ends-Here -->
+
+                </div>
+            }
+        }
+        <!-- Content-Ends-Here -->
+        <!-- Copyright-Starts-Here -->
+        <div class="copyright">
+            <p style="font-family: '微软雅黑';">&copy; 吃瓜网 | 保留一切权利 </p>
+        </div>
+    </div>
+    <!-- //Copyright-Ends-Here -->
+
+</body>
+<!-- Body-Ends-Here -->
+
+</html>

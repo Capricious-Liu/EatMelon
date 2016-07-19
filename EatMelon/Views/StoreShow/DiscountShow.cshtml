@@ -1,0 +1,137 @@
+﻿
+@{
+    Layout = null;
+}
+@model EatMelon.Controllers.DiscountViewModel
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Looks</title>
+    <!---css--->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="css/shop_style.css" rel='stylesheet' type='text/css' />
+    <!---css--->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="js/shop/jquery-1.11.1.min.js"></script>
+    <script src="js/shop/bootstrap.js"></script>
+    <link href='http://fonts.useso.com/css?family=Oregano' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!---header--->
+    <div class="picture">
+        <img src="images\logo.jpg" />
+    </div>
+    <div class="header">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand">
+                            <h1><a href="首页.html">@Model.name</a></h1>
+                        </div>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href=@Url.Content("~/StoreShow/Index?store_id="+Model.store_id.ToString())>店铺首页<span class="sr-only">(current)</span></a></li>
+                            <li><a href=@Url.Content("~/StoreShow/DiscountShow?isHigh=2&store_id="+Model.store_id.ToString() + "&name="+Model.name)>全部宝贝</a></li>
+                        </ul>
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+    <!---header--->
+    <!---looks-->
+    <div class="content">
+        <div class="look-section">
+            <div class="container">
+                <h3>@Model.dis</h3>
+                <div class="gallery-grids-top">
+                    <div class="gallery-grids">
+                        @{
+                            foreach (var item in Model.products)
+                            {
+                                <div class="col-md-4 gallery-grid">
+                                    <a class="example-image-link" href="~/ProductDetails/Details?product_id=@item.ID&store_id=@item.S_ID" data-lightbox="example-set" data-title=""><img class="example-image" src="images/shop/l1.jpg" alt="" /></a>
+                                    <div class="update-info">
+                                        <div class="price-left">
+                                            <h3>@item.NAME</h3>
+                                        </div>
+                                        <div class="price-right">
+                                            <h4>¥@item.PRICE<span></span></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        
+                        <div class="clearfix"> </div>
+                    </div>
+                    <script src="js/shop/lightbox-plus-jquery.min.js"></script>
+                </div>
+            </div>
+            <!-- //container -->
+        </div>
+        <!-- //gallery -->
+    </div>
+    <!---looks-->
+    <!---footer--->
+    <div class="details">
+        <div class="container">
+            <div class="details-grids">
+                <div class="col-md-3 details-grid">
+                    <figure class="icon">
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                    </figure>
+                    <p>上海市曹安公路4800号</p>
+                </div>
+                <div class="col-md-3 details-grid">
+                    <figure class="icon">
+                        <i class="glyphicon glyphicon-earphone"></i>
+                    </figure>
+                    <p>电话 :  +1 900 703 7065</p>
+                </div>
+                <div class="col-md-3 details-grid">
+                    <figure class="icon">
+                        <i class="glyphicon glyphicon-envelope"></i>
+                    </figure>
+                    <p>邮箱 :chigua@mail.com</p>
+                </div>
+                <div class="col-md-3 details-grid">
+                    <figure class="icon">
+                        <i class="glyphicon glyphicon-send"></i>
+                    </figure>
+                    <p>传真 :  +1 900 998 5555</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---footer--->
+    <!--copy-->
+    <div class="copy-section">
+        <div class="container">
+            <p>© 吃瓜网 | 保留一切权利 </p>
+        </div>
+    </div>
+    <!--copy-->
+
+
+</body>
+</html>

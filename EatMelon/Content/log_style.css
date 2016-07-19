@@ -126,8 +126,7 @@ h1 {
 	font-family: '微软雅黑', sans-serif;
 	text-align:center;
 }
-<<<<<<< HEAD
-=======
+
 .add_product .content3 h2 {
 	font-size:40px;
 	padding: 30px 0 0;
@@ -136,7 +135,7 @@ h1 {
 	font-family: '微软雅黑', sans-serif;
 	text-align:center;
 }
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+
 .log1 .content1 p {
 	font-size:15px;
 	padding: 30px 0 0;
@@ -161,8 +160,7 @@ h1 {
 	font-family: '微软雅黑', sans-serif;
 	text-align:center;
 }
-<<<<<<< HEAD
-=======
+
 .add_product .content3 p {
 	font-size:15px;
 	padding: 30px 0 0;
@@ -171,7 +169,7 @@ h1 {
 	font-family: '微软雅黑', sans-serif;
 	text-align:center;
 }
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+
 .log1 {
 	width:75%;
 	margin:0 auto;
@@ -420,16 +418,14 @@ h1 {
 .content input[type="store_name"] {
 	padding:10px 40px 10px 10px;
 	width:70%;
-<<<<<<< HEAD
+
 	border:1px solid #fff;
-=======
-	border:1px solid white;
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+
 	color:#fff;
 	text-align:left;
 	outline:none;
 	font-size:18px;
-<<<<<<< HEAD
+
 	margin-top:4%;
 	font-weight: 300;
 	font-family: '微软雅黑', sans-serif;
@@ -440,7 +436,7 @@ h1 {
 	padding:10px 40px 10px 10px;
 	width:70%;
 	border:1px solid #fff;
-=======
+
 	background:transparent;
 	margin-top:5%;
 	font-weight: 300;
@@ -487,12 +483,12 @@ h1 {
 	padding:10px 40px 10px 10px;
 	width:70%;
 	border:1px solid white;
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+
 	color:#fff;
 	text-align:left;
 	outline:none;
 	font-size:18px;
-<<<<<<< HEAD
+
 	margin-top:6%;
 	font-weight: 300;
 	font-family: '微软雅黑', sans-serif;
@@ -500,7 +496,7 @@ h1 {
 	background:url(../images/log/phone.png) no-repeat 440px 10px;
 }
 .create {
-=======
+
 	background:transparent;
 	margin-top:5%;
 	font-weight: 300;
@@ -550,7 +546,7 @@ h1 {
 	border-radius: 4px;
 }
 .change {
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+
 	padding:10px;
 	background-color:#ff5a60;
 	width:78%;
@@ -567,11 +563,11 @@ h1 {
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 }
-<<<<<<< HEAD
+
 .create:hover {
-=======
+
 .change:hover {
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+
 	background-color:#791F16;
 	color:white;
 }
@@ -1532,15 +1528,12 @@ h1 {
 	width:65%;
 	font-size: 14px;
 }
-<<<<<<< HEAD
-.content input[type="store_type"] {
-	margin-top: 6%;
-	width:65%;
-	font-size: 14px;
-}
-=======
 
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+    .content input[type="store_type"] {
+        margin-top: 6%;
+        width: 65%;
+        font-size: 14px;
+    }
 .log .content1 h2, .log .content2 h2, .create_store .content h2 {
     font-size: 23px;
 }

@@ -21,16 +21,15 @@ namespace EatMelon.Controllers
         public List<string> managers;
     }
 
-    
 
     public class CreateStoreController : Controller
     {
-
+        private decimal MyStore = -1;
 
         private Manages db1 = new Manages();
         private Stores db2 = new Stores();
         private StoreTypes db3 = new StoreTypes();
-        private Users db4=new Users();
+        private Users db4 = new Users();
 
         private thisuserstore en_user_st = new thisuserstore();
 
@@ -52,11 +51,11 @@ namespace EatMelon.Controllers
             return false;
         }
 
-        bool setManageList(decimal s_id,List<string> managers)
+        bool setManageList(decimal s_id, List<string> managers)
         {
             foreach (var manageItem in db1.TB_MANAGE)
             {
-                if ((manageItem.S_ID == s_id)&&(manageItem.AUTHORITY==false))
+                if ((manageItem.S_ID == s_id) && (manageItem.AUTHORITY == false))
                 {
                     foreach (var userItem in db4.TB_USER)
                     {
@@ -75,6 +74,7 @@ namespace EatMelon.Controllers
         // GET: CreateStore
         public ActionResult MyShop()                                  //显示我的店铺，我是店主
         {
+
             //ViewData["uid"] = cur_userid;
             decimal cur_userid = (Session["UserMessage"] as UserMessage).id;
             en_user_st.c_man_st = new List<thismanagestore>();
@@ -86,8 +86,9 @@ namespace EatMelon.Controllers
                     thismanagestore newitem = new thismanagestore();
                     newitem.db_manage = new TB_MANAGE();
                     newitem.managers = new List<string>();
-                    
-                    
+                    TB_MANAGE tempUser = new TB_MANAGE();
+
+
                     newitem.db_manage.U_ID = myMag.U_ID;
                     newitem.db_manage.S_ID = myMag.S_ID;
                     newitem.db_manage.AUTHORITY = myMag.AUTHORITY;
@@ -95,7 +96,7 @@ namespace EatMelon.Controllers
 
                     if (myMag.AUTHORITY == true)
                     {
-
+                        MyStore = myMag.S_ID;
                         setManageList(myMag.S_ID, newitem.managers);
                     }
 
@@ -103,20 +104,99 @@ namespace EatMelon.Controllers
                     searchstore(newitem, myMag.S_ID);
                     en_user_st.c_man_st.Add(newitem);
 
-
-
-
-
                 }
-
             }
+
             return View(en_user_st.c_man_st);
         }
+        [HttpPost]
+        public ActionResult MyShop(String _name)
+        {
+            _name = Request.Form["MANAGERNAME"];
+            TB_MANAGE tempUser = new TB_MANAGE();
+            int tempFound = 0;
+
+            foreach (var userItem in db4.TB_USER)
+            {
+                if (_name == userItem.NAME)
+                {
+                    tempFound = 1;
+
+
+
+                    //获取Mystore；
+                    decimal cur_userid = (Session["UserMessage"] as UserMessage).id;
+                    foreach (TB_MANAGE myMag in db1.TB_MANAGE)
+                    {
+                        if ((myMag.U_ID == cur_userid) && (myMag.AUTHORITY == true))
+                        {
+                            MyStore = myMag.S_ID;
+                            break;
+                        }
+                    }
+
+
+                    tempUser.U_ID = userItem.ID;
+                    tempUser.S_ID = MyStore;
+                    tempUser.AUTHORITY = false;
+
+                    db1.TB_MANAGE.Add(tempUser);
+
+                    db1.SaveChanges();
+                }
+            }
+
+            if (tempFound == 0)
+            {
+                return View(en_user_st.c_man_st);                                 //没有该管理员
+            }
+
+
+            return RedirectToAction("MyShop");
+        }
+
 
         public ActionResult AddShop()
         {
             return View();
         }
+
+        public ActionResult DeleteManages(string _name)
+        {
+            decimal managerID = -1;
+            foreach (var userItem in db4.TB_USER)
+            {
+                if (_name == userItem.NAME)
+                {
+                    managerID = userItem.ID;
+                    break;
+                }
+            }
+
+            decimal storeID = -1;
+            decimal cur_userid = (Session["UserMessage"] as UserMessage).id;
+            foreach (TB_MANAGE myMag in db1.TB_MANAGE)
+            {
+                if ((myMag.U_ID == cur_userid) && (myMag.AUTHORITY == true))
+                {
+                    storeID = myMag.S_ID;
+                    break;
+                }
+            }
+
+            TB_MANAGE manageDel = new TB_MANAGE();
+            manageDel.U_ID = managerID;
+            manageDel.S_ID = storeID;
+
+            string sql = "delete from TB_MANAGE where S_ID=" + manageDel.S_ID.ToString() + " and U_ID=" + manageDel.U_ID.ToString();
+            db1.Database.ExecuteSqlCommand(sql);
+
+
+            db1.SaveChanges();
+
+            return RedirectToAction("MyShop");
+        }
+
 
 
         // POST: TB_STORE/Create
@@ -125,12 +205,12 @@ namespace EatMelon.Controllers
         {
 
             decimal cur_user = (Session["UserMessage"] as UserMessage).id;                                 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                                                             //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                                                             //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-            TB_MANAGE tb_manage=new TB_MANAGE();
-            TB_STORE tb_store=new TB_STORE();
-            TB_STORE_TYPE tb_store_type=new TB_STORE_TYPE();
+            TB_MANAGE tb_manage = new TB_MANAGE();
+            TB_STORE tb_store = new TB_STORE();
+            TB_STORE_TYPE tb_store_type = new TB_STORE_TYPE();
 
 
 
@@ -178,9 +258,12 @@ namespace EatMelon.Controllers
         }
 
 
-        public ActionResult MyManageStore()                   // 显示管理的店铺
-        {
-            return View();
-        }
+        //public ActionResult MyManageStore()                   // 显示管理的店铺
+        //{
+        //    return View();
+        //}
+
+
+
     }
 }

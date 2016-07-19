@@ -175,7 +175,7 @@
                                     <a class="product-here" href="single-page.html"><img src=@modelItems.pictures title="product-name" /></a>
                                     <h4><a href="single-page.html">@modelItems.name</a></h4>*@
 
-                                <a class="product-btn" href="single-page.html"><span>@modelItems.price</span><small style="font-family: '微软雅黑'">现在购买</small><label> </label></a>
+                                <a class="product-btn" href="~/ProductDetails/Details?product_id=@modelItems.id&store_id=@modelItems.s_id"><span>@modelItems.price</span><small style="font-family: '微软雅黑'">现在购买</small><label> </label></a>
                             </div>
 
                         }
@@ -191,7 +191,6 @@
         <!----footer--->
 
         <div class="clearfix"> </div>
-
         <script type="text/javascript">
             $(document).ready(function () {
                 /*

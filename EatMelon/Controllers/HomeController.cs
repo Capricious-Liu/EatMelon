@@ -12,6 +12,8 @@ namespace EatMelon.Controllers
         public string picture { get; set; }
         public string name { get; set; }
         public decimal? price { get; set; }
+        public int? id { get; set; }
+        public int? s_id { get; set; }
     }
 
     public class HomeController : Controller
@@ -36,6 +38,8 @@ namespace EatMelon.Controllers
                     HotProductView product = new HotProductView();
                     product.name = temp_product.NAME;
                     product.price = temp_product.PRICE;
+                    product.id = (int?)temp_product.ID;
+                    product.s_id = (int?)temp_product.S_ID;
                     Pro_pics pics = new Pro_pics();
                     TB_PRO_PIC pic = pics.TB_PRO_PIC.Where(a => a.P_ID == temp_product.ID && a.S_ID == temp_product.S_ID).FirstOrDefault();
                     if (pic != null)

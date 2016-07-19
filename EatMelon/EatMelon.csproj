@@ -175,13 +175,18 @@
     <Compile Include="Controllers\FavourController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PayController.cs" />
+    <Compile Include="Controllers\ProductDetailsController.cs" />
     <Compile Include="Controllers\RegisterAndLoginController.cs" />
     <Compile Include="Controllers\SearchProductController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\StoreShowController.cs" />
     <Compile Include="Controllers\UpdateInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\Contains.cs" />
     <Compile Include="Models\Favours.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -192,6 +197,7 @@
     <Compile Include="Models\Pro_pics.cs" />
     <Compile Include="Models\Stores.cs" />
     <Compile Include="Models\StoreTypes.cs" />
+    <Compile Include="Models\TB_COMMENT.cs" />
     <Compile Include="Models\TB_CONTAINS.cs" />
     <Compile Include="Models\TB_FAVORS.cs" />
     <Compile Include="Models\TB_MANAGE.cs" />
@@ -211,10 +217,7 @@
     <Content Include="Content\cart_style.css" />
     <Content Include="Content\etalage.css" />
     <Content Include="Content\font-awesome.min.css" />
-<<<<<<< HEAD
-=======
     <Content Include="Content\index_style.css" />
->>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
     <Content Include="Content\log_style.css" />
     <Content Include="Content\pay_style.css" />
     <Content Include="Content\style.css" />
@@ -437,6 +440,12 @@
     <Content Include="Views\CreateStore\AddShop.cshtml" />
     <Content Include="Scripts\shopping_cart\.DS_Store" />
     <Content Include="Views\UpdateInfo\Update.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ProductDetails\Details.cshtml" />
+    <Content Include="Views\StoreShow\AllStoreShow.cshtml" />
+    <Content Include="Views\StoreShow\DiscountShow.cshtml" />
+    <Content Include="Views\StoreShow\Index.cshtml" />
+    <Content Include="Views\Pay\Payment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

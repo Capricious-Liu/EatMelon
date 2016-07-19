@@ -14,7 +14,7 @@ namespace EatMelon.Controllers
         public int U_ID { get; set; }
         public int P_ID { get; set; }
         public DateTime? TIME { get; set; }
-        public bool? STATE { get; set; }
+        public decimal? STATE { get; set; }
         public decimal? TOTAL_PRICE { get; set; }
         public decimal NUM { get; set; }
         public string NAME { get; set; }

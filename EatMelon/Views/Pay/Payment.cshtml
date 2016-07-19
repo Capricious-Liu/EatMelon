@@ -1,0 +1,112 @@
+﻿@{
+    Layout = null;
+}
+@model EatMelon.Controllers.PayViewModel
+<script src="~/Scripts/select/jquery.min.js"></script>
+<script src="~/Scripts/select/bootstrap.min.js"></script>
+<script src="~/Scripts/select/distpicker.data.js"></script>
+<script src="~/Scripts/select/distpicker.js"></script>
+<script src="~/Scripts/select/main.js"></script>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>确认订单|吃瓜网|网上商城</title>
+    <link href="~/css/pay_style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="吃瓜网,电商,网上商城" />
+    <!--web-fonts-->
+    <link href='//fonts.googleapis.com/css?family=Exo:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,100,200,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <!--web-fonts-->
+</head>
+
+<body>
+
+
+    <!---header--->
+    <div class="header">
+        <h1 style="font-size: 65px">订单支付</h1>
+    </div>
+
+    <!---header--->
+    <!---main--->@using (Html.BeginForm())
+    {
+        <div class="main">
+            <div class="main-section">
+                <div class="payment-left">
+                    <div class="payment-top">
+                        <div class="price">
+                            <div class="price-left">
+                                <h3>商品价格</h3>
+                            </div>
+                            <div class="price-right">
+                                <h4>¥@decimal.Floor((decimal)Model.old_price)<span>@Model.point_num</span></h4>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+
+                    </div>
+                    <div class="total">
+                        <div class="total-left">
+                            <h3>订单总价</h3>
+                        </div>
+                        <div class="total-right">
+                            <h4>¥@Model.new_price</h4>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="picture">
+                        <img src="images/payment/2.jpg">
+                    </div>
+                </div>
+
+                <div class="payment-right">
+                    <form>
+                        <input name="name" type="text" placeholder="@Model.name" style="line-height: 200%"><br><br>
+                        <input name="phone" type="text" placeholder="@Model.phone" style="line-height: 200%"><br><br>
+                        <input name="zipcode" type="text" placeholder="@Model.zipcode" style="line-height: 200%"><br><br>
+                        <form class="form-inline">
+                            <div data-toggle="distpicker">
+                                <div class="form-group">
+                                    <select name="province" data-province="@Model.province" class="form-control"><option value="" data-code="">—— 省 ——</option><option value="北京市" data-code="110000" selected="">北京市</option><option value="天津市" data-code="120000">天津市</option><option value="河北省" data-code="130000">河北省</option><option value="山西省" data-code="140000">山西省</option><option value="内蒙古自治区" data-code="150000">内蒙古自治区</option><option value="辽宁省" data-code="210000">辽宁省</option><option value="吉林省" data-code="220000">吉林省</option><option value="黑龙江省" data-code="230000">黑龙江省</option><option value="上海市" data-code="310000">上海市</option><option value="江苏省" data-code="320000">江苏省</option><option value="浙江省" data-code="330000">浙江省</option><option value="安徽省" data-code="340000">安徽省</option><option value="福建省" data-code="350000">福建省</option><option value="江西省" data-code="360000">江西省</option><option value="山东省" data-code="370000">山东省</option><option value="河南省" data-code="410000">河南省</option><option value="湖北省" data-code="420000">湖北省</option><option value="湖南省" data-code="430000">湖南省</option><option value="广东省" data-code="440000">广东省</option><option value="广西壮族自治区" data-code="450000">广西壮族自治区</option><option value="海南省" data-code="460000">海南省</option><option value="重庆市" data-code="500000">重庆市</option><option value="四川省" data-code="510000">四川省</option><option value="贵州省" data-code="520000">贵州省</option><option value="云南省" data-code="530000">云南省</option><option value="西藏自治区" data-code="540000">西藏自治区</option><option value="陕西省" data-code="610000">陕西省</option><option value="甘肃省" data-code="620000">甘肃省</option><option value="青海省" data-code="630000">青海省</option><option value="宁夏回族自治区" data-code="640000">宁夏回族自治区</option><option value="新疆维吾尔自治区" data-code="650000">新疆维吾尔自治区</option><option value="台湾省" data-code="710000">台湾省</option><option value="香港特别行政区" data-code="810000">香港特别行政区</option><option value="澳门特别行政区" data-code="820000">澳门特别行政区</option></select>
+                                    <select name="city" data-city="@Model.city" class="form-control"><option value="" data-code="">—— 市 ——</option><option value="北京市市辖区" data-code="110100" selected="">北京市市辖区</option></select>
+                                    <select name="district" data-district="@Model.district" class="form-control"><option value="" data-code="">—— 区 ——</option><option value="东城区" data-code="110101" selected="">东城区</option><option value="西城区" data-code="110102">西城区</option><option value="朝阳区" data-code="110105">朝阳区</option><option value="丰台区" data-code="110106">丰台区</option><option value="石景山区" data-code="110107">石景山区</option><option value="海淀区" data-code="110108">海淀区</option><option value="门头沟区" data-code="110109">门头沟区</option><option value="房山区" data-code="110111">房山区</option><option value="通州区" data-code="110112">通州区</option><option value="顺义区" data-code="110113">顺义区</option><option value="昌平区" data-code="110114">昌平区</option><option value="大兴区" data-code="110115">大兴区</option><option value="怀柔区" data-code="110116">怀柔区</option><option value="平谷区" data-code="110117">平谷区</option><option value="密云区" data-code="110118">密云区</option><option value="延庆区" data-code="110119">延庆区</option></select>
+                                </div><br><br>
+                            </div>
+                        </form>
+
+                        <input name="detailaddr" type="text" placeholder="@Model.detailaddr" style="line-height: 200%"><br><br>
+                        <input name="creditcode" type="text" placeholder="@Model.creditcode" style="line-height: 200%"><br><br>
+                        <input name="password" type="password" placeholder="登录密码" style="line-height: 200%">
+                    </form>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    }
+    <div class="button-row">
+        <input name="push" type="submit" class="confirm" value="完成订单" />
+        <input name="cancle" type="submit" class="cancel" value="取消订单" />
+        <div class="clear"></div>
+    </div>
+
+    <div class="footer">
+        <p>© 吃瓜网 | 保留一切权利 </p>
+    </div>
+
+
+
+
+
+
+
+    <!---main--->
+</body>
+</html>

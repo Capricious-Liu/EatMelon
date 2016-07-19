@@ -1,0 +1,212 @@
+﻿
+@{
+    Layout = null;
+}
+@model IEnumerable<EatMelon.Controllers.AllStoreViewModel>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Stores</title>
+    <link href="~/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Scripts/index/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="~/css/index_style.css" rel='stylesheet' type='text/css' />
+    <!-- Custom Theme files -->
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="js/index/move-top.js"></script>
+    <script type="text/javascript" src="js/index/easing.js"></script>
+    <script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+    </script>
+    <!---- start-smoth-scrolling---->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    </script>
+    <!----webfonts--->
+    <!---//webfonts--->
+    <!----start-top-nav-script---->
+    <script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+    </script>
+    <!----//End-top-nav-script---->
+</head>
+<body>
+    <!----container-another---->
+    <div class="container-another">
+        <!----top-header---->
+        <div class="top-header">
+            <div class="logo">
+                <a href="index.html"><img src="images/index/logo.jpg" title="barndlogo" /></a>
+            </div>
+            <br>
+            <!--这里是登陆以后的代码  这里是登陆以后的代码  这里是登陆以后的代码 ！-->
+            <div class="top-header-info">
+                <!--<div class="top-contact-info">
+                    <div class="top-contact-info">
+                        <ul class="unstyled-list list-inline">
+                            <li style="font-family: 微软雅黑"><span class="phone"> </span>你好,<a href="personalPage">我的名字!</a></li>
+                            <li style="font-family: 微软雅黑"><a href="cartPage"><span class="mail"> </span></a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                </div>-->
+                <div class="cart-details">
+                    <div class="add-to-cart">
+                        <ul class="unstyled-list list-inline">
+                            <li>
+                                <span class="cart"> </span>
+                                <ul class="cart-sub">
+                                    <li><p>0 Products</p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-rigister">
+                        <ul class="unstyled-list list-inline">
+                            <li><a class="login" href="login.html" style="font-family: 微软雅黑">登录</a></li>
+                            <li><a class="rigister" href="#" style="font-family: 微软雅黑">注册 <span> </span></a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <!----//top-header---->
+        <div class="top-header-nav">
+            <!----start-top-nav---->
+            <nav class="top-nav main-menu">
+                <ul class="top-nav">
+                    <li><a href="ClothesType.html" style="font-family: 微软雅黑;color: #ff5a60">吃瓜商品 </a><span> </span></li>
+                    <li><a href="Stores.html" style="font-family: 微软雅黑;color: #ff5a60">吃瓜店铺</a><span> </span></li>
+                    <li><a href="Contact.html" style="font-family: 微软雅黑;color: #ff5a60">联系</a><span> </span></li>
+                    <li><a href="AboutUs.html" style="font-family: 微软雅黑;color: #ff5a60">关于我们</a><span> </span></li>
+
+                    <div class="clearfix"> </div>
+                </ul>
+                <a href="#" id="pull"><img src="images/index/nav-icon.png" title="menu" /></a>
+            </nav>
+            <!----End-top-nav---->
+            <!---top-header-search-box--->
+            <div class="top-header-search-box">
+                <form>
+                    <input type="text" placeholder="Search" required / maxlength="22">
+                    <input type="submit" value=" ">
+                </form>
+            </div>
+            <!---top-header-search-box--->
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--//top-header-nav---->
+    <!----content---->
+    <div class="content">
+        <div class="container-another">
+            <!--- products ---->
+
+
+            <div class="clearfix"> </div>
+            <!-- //products ---->
+            <!----speical-products---->
+            <!----speical-products---->
+            <div class="special-products">
+                <div class="s-products-head">
+                    <div class="s-products-head-left">
+                        <h3 style="font-family: '微软雅黑 Light'">@ViewData["StoreKeyString"] <span style="font-family: '微软雅黑 Light'">店铺</span></h3>
+                    </div>
+
+                    <div class="clearfix"> </div>
+                </div>
+                <!----special-products-grids---->
+                <div class="special-products-grids">
+                    @{
+                        int i = 0;
+                        foreach (var item in Model)
+                        {
+                            <div class="col-md-3 special-products-grid1 ">
+
+                                <script language="javascript">
+
+										var arr = document.getElementsByTagName("h1");
+
+										function test(index)
+										{
+											arr[index].style.visibility = "visible";
+											arr[index].nextSibling.style.visibility = "visible";
+										}
+
+										function test2(index)
+										{
+											arr[index].style.visibility = "hidden";
+											arr[index].nextSibling.style.visibility = "hidden";
+										}
+
+                                </script>
+                                <a class="product-here1" style="font-family: 微软雅黑;margin-left:430px ;color: #ff5a60;font-size: xx-large" href=@Url.Content("~/StoreShow/index?store_id=" + item.store_id.ToString())> @item.store_name</a>
+                                <a href="这里是等级" style="margin-left: 10px;font-size: large;font-family: 微软雅黑">
+                                    (@item.rank)个瓜
+                                </a>
+
+                                <div class="productpic">
+                                    <ul>
+                                        @{
+                                            
+                                            foreach (var product in item.products)
+                                            {
+                                                <li onmousemove="test(@i)" onmouseout="test2(@i)"><a href="~/ProductDetails/Details?product_id=@product.product.ID&store_id=@product.product.S_ID"><img src="@product.PICTURE" /><h1></h1><b>@product.product.DESCRIPTION</b></a> </li>
+                                                i++;
+                                            }
+                                        }
+                                       
+                                    </ul>
+                                </div>
+
+                            </div>  <br> <br>
+                        }
+                    }
+
+                   
+
+                  
+
+
+
+
+
+
+                    <div class="clearfix"> </div>
+                </div>
+                <!---//special-products-grids---->
+            </div>
+            <!---//speical-products---->
+            <!----->
+
+        </div>
+        <!--//copy-right--->
+    </div>
+    <!----container-another---->
+
+</body>
+</html>
+
