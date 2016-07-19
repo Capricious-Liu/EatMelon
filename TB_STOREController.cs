@@ -114,6 +114,11 @@ namespace test2.Controllers
                         tb_chk_str.STATE = "1";
                         db.TB_CHECK_STORE.Add(tb_chk_str);
                         db.SaveChanges();
+                        TB_DECORATION tb_store_dec = new TB_DECORATION();
+                        tb_store_dec.ID = myStore.ID;
+                        tb_store_dec.FILE_NAME = "null";
+                        db.TB_DECORATION.Add(tb_store_dec);
+                        db.SaveChanges();
                         return RedirectToAction("Index", new { id = cur_user });
                     }
                 }
