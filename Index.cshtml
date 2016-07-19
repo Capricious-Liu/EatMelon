@@ -1,0 +1,18 @@
+﻿@model test5.Models.TB_DECORATION
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.DisplayFor(model => model.FILE_NAME)
+    <br/>
+    string decstr = Model.FILE_NAME;
+    <input type="text" name="DEC_FINAME" value=@decstr />
+
+    <input type="submit" value="修改" class="btn btn-default" />
+}
+
