@@ -34,7 +34,7 @@ namespace test5.Controllers
             ViewData["CURPAGE"] = pagenum as decimal?;
             ViewData["CUR_AID"] = cur_aid as decimal?;
             Session["CUR_AID"] = cur_aid;
-            decimal? pagesize = 1;
+            decimal? pagesize = 5;
             decimal? pagecnt = 0;
             decimal? pagestart = (pagenum - 1) * pagesize;
             decimal? pageend = pagenum * pagesize;
@@ -99,8 +99,6 @@ namespace test5.Controllers
                 this_chk_slist.Add(new_chk_sitem);
             }
             ViewData["NEXTPAGE"] = 0;
-            int k = 0;
-            k = k + 1;
             if ((pagecnt + 1) > db.TB_CHECK_STORE.Count())
             {
                 ViewData["NEXTPAGE"] = 1;
