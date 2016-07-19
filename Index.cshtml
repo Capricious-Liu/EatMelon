@@ -1,0 +1,58 @@
+﻿@model IEnumerable<test5.Controllers.List_chk_sitem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    int i = 0;
+    foreach (var item in Model)
+    {
+        int j = 0;
+        <table class="table">
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tb_sitem.NAME)
+                </td>
+                <td>
+                    @{string tstring1 = "state" + i.ToString();}
+                    <input type="text" name=@tstring1 value=@item.tb_chk_sitem.STATE />
+                </td>
+            </tr>
+            @foreach (var item1 in item.tb_chk_prolist)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item1.tb_proitem.NAME)
+                    </td>
+                    <td>
+                        @{string tstring2 = "state" + i.ToString() + j.ToString();}
+                        <input type="text" name=@tstring2 value=@item1.tb_chk_proitem.STATE />
+                    </td>
+                    @foreach (var item2 in item1.tb_piclist)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item2.PICTURE)
+                        </td>
+                    }
+                </tr>
+                j = j + 1;
+            }
+        </table>
+        i = i + 1;
+}
+<div>
+    @if (Convert.ToDecimal(ViewData["CURPAGE"] as decimal?) > 1)
+    {
+        @Html.ActionLink("上一页", "Index", new { page = ((ViewData["CURPAGE"] as decimal?) - 1), aid = (ViewData["CUR_AID"] as decimal?) })
+    }
+    @if (Convert.ToDecimal(ViewData["NEXTPAGE"] as decimal?) == 0)
+    {
+    @Html.ActionLink("下一页", "Index", new { page = ((ViewData["CURPAGE"] as decimal?) + 1), aid = (ViewData["CUR_AID"] as decimal?) })
+    }
+</div>
+    <input type="submit" value="提交" class="btn btn-default" />
+}
