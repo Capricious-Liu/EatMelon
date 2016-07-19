@@ -126,6 +126,17 @@ h1 {
 	font-family: '微软雅黑', sans-serif;
 	text-align:center;
 }
+<<<<<<< HEAD
+=======
+.add_product .content3 h2 {
+	font-size:40px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
 .log1 .content1 p {
 	font-size:15px;
 	padding: 30px 0 0;
@@ -150,6 +161,17 @@ h1 {
 	font-family: '微软雅黑', sans-serif;
 	text-align:center;
 }
+<<<<<<< HEAD
+=======
+.add_product .content3 p {
+	font-size:15px;
+	padding: 30px 0 0;
+	color:#fff;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	text-align:center;
+}
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
 .log1 {
 	width:75%;
 	margin:0 auto;
@@ -398,11 +420,16 @@ h1 {
 .content input[type="store_name"] {
 	padding:10px 40px 10px 10px;
 	width:70%;
+<<<<<<< HEAD
 	border:1px solid #fff;
+=======
+	border:1px solid white;
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
 	color:#fff;
 	text-align:left;
 	outline:none;
 	font-size:18px;
+<<<<<<< HEAD
 	margin-top:4%;
 	font-weight: 300;
 	font-family: '微软雅黑', sans-serif;
@@ -413,16 +440,14 @@ h1 {
 	padding:10px 40px 10px 10px;
 	width:70%;
 	border:1px solid #fff;
-	color:#fff;
-	text-align:left;
-	outline:none;
-	font-size:18px;
-	margin-top:6%;
+=======
+	background:transparent;
+	margin-top:5%;
 	font-weight: 300;
 	font-family: '微软雅黑', sans-serif;
 	border-radius: 4px;
-	background:url(../images/log/phone.png) no-repeat 440px 10px;
 }
+
 .create {
 	padding:10px;
 	background-color:#ff5a60;
@@ -441,6 +466,112 @@ h1 {
 	-o-transition: all 0.5s ease-in-out;
 }
 .create:hover {
+	background-color:#791F16;
+	color:white;
+}
+
+.add_product {
+	width:75%;
+	margin:0 auto;
+}
+.content3 {
+	width: 48%;
+	margin:0px 240px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.21);
+    padding: 30px 0;
+    float: left;
+    border-radius: 0px;
+}
+.content3 input[type="pro_name"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+<<<<<<< HEAD
+	margin-top:6%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+	background:url(../images/log/phone.png) no-repeat 440px 10px;
+}
+.create {
+=======
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content3 input[type="pro_num"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content3 input[type="des_pic"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.content3 textarea[type="describe"] {
+	padding:10px 40px 10px 10px;
+	width:70%;
+	border:1px solid white;
+	color:#fff;
+	text-align:left;
+	outline:none;
+	font-size:18px;
+	background:transparent;
+	margin-top:5%;
+	font-weight: 300;
+	font-family: '微软雅黑', sans-serif;
+	border-radius: 4px;
+}
+.change {
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
+	padding:10px;
+	background-color:#ff5a60;
+	width:78%;
+	border:none;
+	cursor:pointer;
+	color:#dcecfc;
+	font-weight: 500;
+	font-family: '微软雅黑', sans-serif;
+	font-size:20px;
+	margin-top:7%;
+	text-transform:uppercase;
+	border-radius:4px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+}
+<<<<<<< HEAD
+.create:hover {
+=======
+.change:hover {
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
 	background-color:#791F16;
 	color:white;
 }
@@ -1401,11 +1532,15 @@ h1 {
 	width:65%;
 	font-size: 14px;
 }
+<<<<<<< HEAD
 .content input[type="store_type"] {
 	margin-top: 6%;
 	width:65%;
 	font-size: 14px;
 }
+=======
+
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
 .log .content1 h2, .log .content2 h2, .create_store .content h2 {
     font-size: 23px;
 }

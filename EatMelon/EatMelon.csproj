@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -210,6 +211,10 @@
     <Content Include="Content\cart_style.css" />
     <Content Include="Content\etalage.css" />
     <Content Include="Content\font-awesome.min.css" />
+<<<<<<< HEAD
+=======
+    <Content Include="Content\index_style.css" />
+>>>>>>> ce05132ec12fc3643be43eec4b415672bf42b0b8
     <Content Include="Content\log_style.css" />
     <Content Include="Content\pay_style.css" />
     <Content Include="Content\style.css" />
@@ -361,10 +366,13 @@
     <Content Include="Scripts\account\.DS_Store" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\distpicker.data.js" />
+    <Content Include="Scripts\distpicker.js" />
     <Content Include="Scripts\easing.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
     <Content Include="Scripts\jquery.etalage.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.responsiveTabs.js" />
@@ -372,6 +380,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\move-top.js" />
     <Content Include="Scripts\respond.js" />
