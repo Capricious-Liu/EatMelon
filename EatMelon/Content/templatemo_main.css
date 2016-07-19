@@ -18,7 +18,7 @@
 
 /* 2. General Styles
 --------------------------------------- */
-* { font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+* { font-family: "微软雅黑","HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 body { background-color: rgb(235,235,235); }
 h1 { font-size: 24px; }
 .btn a {
@@ -220,7 +220,7 @@ h1 { font-size: 24px; }
 }
 #linksbar li { float:left; }
 #linksbar li a { padding:10px 20px 10px 0px; font-size:200;}
-#linksbar li, #linksbar li a { display:inline-block; color:#fff; font-size:1em; font-family:'Droid Sans'; line-height:16px; }
+#linksbar li, #linksbar li a { display:inline-block; color:#fff; font-size:1em; font-family:'微软雅黑'; line-height:16px; }
 #linksbar li a:hover { color:#b9b8b8; }
 #linksbar .basketpopup { display:none; }
 #linksbar li.icon { padding-left:20px; background:8px center no-repeat; }

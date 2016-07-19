@@ -1,20 +1,23 @@
-﻿
+﻿@model  Tuple<List<EatMelon.Controllers.ProductViewModel>, List<EatMelon.Controllers.OrderViewModel>>
+
+
 @{
     Layout = null;
 }
 
 <!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <title>我的账号|吃瓜网|网上商城</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/templatemo_main.css">
+    <link rel="stylesheet" href="~/Content/templatemo_main.css">
 </head>
 <body>
     <div>
-        <img src="images/logo.jpg">
+        <img src="~/images/logo.jpg">
     </div>
     <div class="navbar navbar-inverse" role="navigation">
         <div class="navbar-header">
@@ -36,8 +39,8 @@
                 <li class="active"><a href="#"><i class="fa fa-home"></i>账号主页</a></li>
                 <li><a href="~/Favour/FavourShow"><i class="fa fa-star"></i>收藏夹</a></li>
                 <li><a href="order.html"><i class="fa fa-file-text-o"></i>我的订单</a></li>
-                <li><a href="~/CreateStore/Myshop"><i class="fa fa-users"></i>我的商店</a></li>
-                <li><a href="preferences.html"><i class="fa fa-cog"></i>个人资料</a></li>
+                <li><a href="~/CreateStore/MyShop"><i class="fa fa-users"></i>我的商店</a></li>
+                <li><a href="~/UpdateInfo/Update"><i class="fa fa-cog"></i>个人资料</a></li>
                 <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out" style="font-family: 微软雅黑"></i>登出</a></li>
             </ul>
         </div><!--/.navbar-collapse -->
@@ -58,40 +61,38 @@
                                                 <th style="font-family: 微软雅黑">商铺名</th>
                                                 <th style="font-family: 微软雅黑">商品名</th>
                                                 <th style="font-family: 微软雅黑">价格</th>
-                                                <th style="font-family: 微软雅黑">收藏时间</th>
                                                 <th>取消收藏</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td><a href="shop_index.html">Xavier的小铺</a></td>
-                                                <td><a href="single-page.html">X战警钱包</a></td>
-                                                <td>￥50.00</td>
-                                                <td>2016.7.16</td>
-                                                <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td><a href="shop_index.html">凌美官方吃瓜店铺</a></td>
-                                                <td><a href="single-page.html">【全球购认证】德国正品原装LAMY/凌美钢笔……</a></td>
-                                                <td>￥200.00</td>
-                                                <td>2016.7.14</td>
-                                                <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td><a href="shop_index.html">机械键盘集中营</a></td>
-                                                <td><a href="single-page.html">现货 Qwerkywriter 复古机械键盘 蓝牙无线键……</a></td>
-                                                <td>￥3800.00</td>
-                                                <td>2016.7.11</td>
-                                                <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
-                                            </tr>
+                                            @{
+                                                for (int i = 0; i < (3 <= Model.Item1.Count ? 3 : Model.Item1.Count); i++)
+                                                {
+                                                    var temp = Model.Item1[i];
+                                                    if (temp == null)
+                                                    {
+                                                        break;
+                                                    }
+
+                                                    <tr>
+                                                        <td>@(i + 1)</td>
+                                                        <td><a href=#>Xavier的小铺</a></td>
+                                                        <td><a href=#>@temp.NAME</a></td>
+                                                        <td>￥@temp.PRICE</td> @*整数的价格？*@
+                                                        <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
+                                                    </tr>
+
+
+                                                }
+                                            }
+
                                         </tbody>
                                     </table>
+
+
                                 </div>
                             </div>
-                            <span class="btn btn-success"><a href="favours.html" style="font-family: 微软雅黑">查看更多</a></span>
+                            <span class="btn btn-success"><a href="~/Favour/FavourShow" style="font-family: 微软雅黑">查看更多</a></span>
                         </div>
                     </div>
                     <div class="row">
@@ -112,33 +113,27 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Xavier的小铺</td>
-                                                <td>X战警钱包</td>
-                                                <td>￥50.00</td>
-                                                <td>2016.7.16</td>
-                                                <td><a href="comment.html" class="btn btn-default">详情</a></td>
-                                                <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>凌美官方吃瓜店铺</td>
-                                                <td>【全球购认证】德国正品原装LAMY/凌美钢笔……</td>
-                                                <td>￥200.00</td>
-                                                <td>2016.7.14</td>
-                                                <td><a href="comment.html" class="btn btn-default">详情</a></td>
-                                                <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>机械键盘集中营</td>
-                                                <td>现货 Qwerkywriter 复古机械键盘 蓝牙无线键……</td>
-                                                <td>￥3800.00</td>
-                                                <td>2016.7.11</td>
-                                                <td><a href="comment.html" class="btn btn-default">详情</a></td>
-                                                <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
-                                            </tr>
+
+                                            @{
+                                                for (int i = 0; i < (3 < Model.Item2.Count ? 3 : Model.Item2.Count); i++)
+                                                {
+                                                    var temp = Model.Item2[i];
+                                                    if (temp == null)
+                                                    {
+                                                        break;
+                                                    }
+                                                    <tr>
+                                                        <td>@(i + 1)</td>
+                                                        <td>Xavier的小铺</td>
+                                                        <td>@temp.NAME</td>
+                                                        <td>@temp.TOTAL_PRICE</td>
+                                                        <td>@temp.TIME</td>
+                                                        <td><a href=# class="btn btn-default">详情</a></td>
+                                                        <td><a href="#" class="btn btn-link" style="font-family: 微软雅黑">删除</a></td>
+                                                    </tr>
+                                                }
+                                            }
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -156,9 +151,9 @@
         </footer>
     </div>
 
-    <script src="js/account/jquery.min.js"></script>
-    <script src="js/account/bootstrap.min.js"></script>
-    <script src="js/account/Chart.min.js"></script>
-    <script src="js/account/templatemo_script.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Chart.min.js"></script>
+    <script src="~/Scripts/templatemo_script.js"></script>
 </body>
 </html>

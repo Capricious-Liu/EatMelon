@@ -1,17 +1,57 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
-<!DOCTYPE html>
+<!-- 登录页面 -->
 
+<!doctype html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>AddShop</title>
+    <title>创建商店|吃瓜网|网上商城</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="电商,网上商城,吃瓜网" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- font files  -->
+    <link href='//fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- /font files  -->
+    <!-- css files -->
+    <link href="css/log_style.css" rel='stylesheet' type='text/css' media="all" />
+    <!-- /css files -->
 </head>
 <body>
-    <div> 
+    <h1>创建一个新的商铺</h1>
+    <div class="create_store">
+        <div class="content">
+            @using (Html.BeginForm())
+            {
+                <input type="text" name="NAME" value="店铺名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '商铺名';}">
+                <select class="form-control-store" name="TYPE">
+                    <option value="">—— 店铺类型 ——</option>
+                    <option value="衣服" selected="">衣服</option>
+                    <option value="鞋包">鞋包</option>
+                    <option value="玩具">玩具</option>
+                    <option value="日用品">日用品</option>
+                    <option value="文具">文具</option>
+                    <option value="体育用品">体育用品</option>
+                    <option value="家居">家居</option>
+                    <option value="化妆品">化妆品</option>
+                    <option value="食物">食物</option>
+                    <option value="乐器">乐器</option>
+                    <option value="茶饮">茶饮</option>
+                    <option value="书籍">书籍</option>
+                    <option value="数码与电器">数码与电器</option>
+                </select>
+                <input type="submit" class="create" value="创建">
+                <div class="clear"></div>
+            }
+        </div>
+        <div class="clear"></div>
     </div>
+    <div class="footer">
+        <p>© 吃瓜网 | 保留一切权利 </p>
+    </div>
+
 </body>
 </html>

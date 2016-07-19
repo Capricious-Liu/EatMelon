@@ -36,7 +36,7 @@ namespace EatMelon.Controllers
                             // ViewData["UserMessage"] = MyUser;
 
                             Session["UserMessage"] = MyUser;
-                            return RedirectToAction("Index", "SearchProduct");                 // !!!!!!!!!!!!!!!!!!!!!!!!登陆成功跳转页面
+                            return RedirectToAction("Index", "Home");                 // !!!!!!!!!!!!!!!!!!!!!!!!登陆成功跳转页面
                         }
                         else
                         {

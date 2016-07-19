@@ -1,0 +1,217 @@
+﻿@model EatMelon.Models.TB_USER
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>个人资料|吃瓜网|网上商城</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="~/css/templatemo_main.css">
+
+</head>
+<body>
+    <div>
+        <img src="images/logo.jpg">
+    </div>
+    <div id="main-wrapper">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <div class="logo"><h1 style="font-family: 微软雅黑">账号设置-个人资料</h1></div>
+                <div id="linksbar">
+                    <!-- class=group>-->
+                    <li class="icon cart">
+                        <a class="trigger" href="shopping_cart.html">
+                            <!-- 跳转到购物车页面 -->
+                        </a> |
+                    </li>
+                    <li><a href="index.html">首页</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="template-page-wrapper">
+            <div class="templatemo-sidebar">
+                <ul class="templatemo-sidebar-menu">
+                    <li><a href="~/AccountIndex/Index"><i class="fa fa-home"></i>账号主页</a></li>
+                    <li><a href="~/Favour/FavourShow"><i class="fa fa-star"></i>收藏夹</a></li>
+                    <li><a href="order.html"><i class="fa fa-file-text-o"></i>我的订单</a></li>
+                    <li><a href="~/CreateStore/MyShop"><i class="fa fa-users"></i>我的商店</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-cog"></i>个人资料</a></li>
+                    <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>登出</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+            @using (Html.BeginForm())
+            {
+                <div class="templatemo-content-wrapper">
+                    <div class="templatemo-content">
+                        <h1 style="font-family: 微软雅黑">个人资料</h1>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form role="form" id="templatemo-preferences-form">
+                                    <div class="row">
+                                        <div class="col-md-6 margin-bottom-15">
+                                            <label style="font-family: 微软雅黑">用户名</label>
+                                            <p class="form-control-static" id="username" style="font-family: 微软雅黑">@Model.NAME</p>
+                                        </div>
+                                        <div class="col-md-6 margin-bottom-15">
+                                            <label for="phone_no" style="font-family: 微软雅黑">电话号码</label>
+                                            <input name="phone" type="text" class="form-control" id="phone_no" placeholder=@Model.PHONE>
+                                        </div>
+
+                                        @*<div class="row">
+                                                <div class="col-md-6 margin-bottom-15">
+                                                    <label for="password_1" style="font-family: 微软雅黑">新密码</label>
+                                                    <input name="first_password" type="password" class="form-control" id="password_1" placeholder="New Password">
+                                                </div>
+                                                <div class="col-md-6 margin-bottom-15">
+                                                    <label for="password_2" style="font-family: 微软雅黑">确认新密码</label>
+                                                    <input name="second_password" type="password" class="form-control" id="password_2" placeholder="Confirm New Password">
+                                                </div>
+                                            </div>*@
+                                        @{
+                if ((bool)ViewData["check_password"] == true)
+                {
+                    <div class="row">
+                        <div class="col-md-6 margin-bottom-15">
+                            <label for="password_1" style="font-family: 微软雅黑">新密码</label>
+                            <input name="first_password" type="password" class="form-control" id="password_1" placeholder="New Password">
+                        </div>
+                        <div class="col-md-6 margin-bottom-15">
+                            <label for="password_2" style="font-family: 微软雅黑">确认新密码</label>
+                            <input name="second_password" type="password" class="form-control" id="password_2" placeholder="Confirm New Password">
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="row has-error has-feedback">
+                        <div class="row">
+                            <div class="col-md-6 margin-bottom-15">
+                                <label for="password_1" style="font-family: 微软雅黑">新密码</label>
+                                <input name="first_password" type="password" class="form-control" id="password_1" placeholder="New Password">
+                                <span class="fa fa-times form-control-feedback"></span>
+                            </div>
+                            <div class="col-md-6 margin-bottom-15">
+                                <label for="password_2" style="font-family: 微软雅黑">确认新密码</label>
+                                <input name="second_password" type="password" class="form-control" id="password_2" placeholder="Confirm New Password">
+
+                                <span class="fa fa-times form-control-feedback"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+                                        }
+                                        <!--
+                                                        <div class="has-success has-feedback">
+                                                          <div class="row">
+                                                           <div class="col-md-12 margin-bottom-15">
+                                                            <label class="control-label" for="inputSuccess">Input with success</label>
+                                                            <input type="text" class="form-control" id="inputSuccess">
+                                                            <span class="fa fa-check form-control-feedback"></span>
+                                                          </div>
+                                                        </div>
+
+                                                      </div>
+                                                      <div class="row has-warning has-feedback">
+                                                        <div class="col-md-12 margin-bottom-15">
+                                                          <label class="control-label" for="inputWarning">Input with warning</label>
+                                                          <input type="text" class="form-control" id="inputWarning">
+                                                          <span class="fa fa-warning form-control-feedback"></span>
+                                                        </div>
+                                                      </div>
+                                                      <div class="row has-error has-feedback">
+                                                        <div class="col-md-12 margin-bottom-15">
+                                                          <label class="control-label" for="inputError">Input with error</label>
+                                                          <input type="text" class="form-control" id="inputError">
+                                                          <span class="fa fa-times form-control-feedback"></span>
+                                                        </div>
+                                                      </div>
+                                        -->
+
+                                        <div class="row">
+                                            <div class="col-md-6 margin-bottom-15">
+                                                <label for="cred_no" style="font-family: 微软雅黑">信用卡号</label>
+                                                <input name="credit_no" type="text" class="form-control" id="cred_no" placeholder=@Model.CREDIT_NO>
+                                            </div>
+                                            <div class="col-md-6 margin-bottom-15">
+                                                <label for="zipcode" style="font-family: 微软雅黑">邮编</label>
+                                                <input name="zipcode" type="text" class="form-control" id="zipcode" placeholder=@Model.ZIPCODE>
+                                            </div>
+                                            @{  <form class="form-inline">
+                                                    <div data-toggle="distpicker">
+                                                        <div class="form-group">
+
+
+
+                                                            @*这里要改！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+                                                                                                                    <script language="javascript" src="~/Scripts/select/distpicker.js">
+                                                                                                                        jQuery(document).ready(function($) {
+
+                                                                                                                        })
+
+                                                                }
+                                                                                                                    </script>
+
+                                                            *@
+
+                                                            <select data-province="@Model.PROVINCE" name="province" class="form-control-select"><option value="" data-code="">—— 省 ——</option><option value="北京市" data-code="110000" selected="selected">北京市</option><option value="天津市" data-code="120000">天津市</option><option value="河北省" data-code="130000">河北省</option><option value="山西省" data-code="140000">山西省</option><option value="内蒙古自治区" data-code="150000">内蒙古自治区</option><option value="辽宁省" data-code="210000">辽宁省</option><option value="吉林省" data-code="220000">吉林省</option><option value="黑龙江省" data-code="230000">黑龙江省</option><option value="上海市" data-code="310000">上海市</option><option value="江苏省" data-code="320000">江苏省</option><option value="浙江省" data-code="330000">浙江省</option><option value="安徽省" data-code="340000">安徽省</option><option value="福建省" data-code="350000">福建省</option><option value="江西省" data-code="360000">江西省</option><option value="山东省" data-code="370000">山东省</option><option value="河南省" data-code="410000">河南省</option><option value="湖北省" data-code="420000">湖北省</option><option value="湖南省" data-code="430000">湖南省</option><option value="广东省" data-code="440000">广东省</option><option value="广西壮族自治区" data-code="450000">广西壮族自治区</option><option value="海南省" data-code="460000">海南省</option><option value="重庆市" data-code="500000">重庆市</option><option value="四川省" data-code="510000">四川省</option><option value="贵州省" data-code="520000">贵州省</option><option value="云南省" data-code="530000">云南省</option><option value="西藏自治区" data-code="540000">西藏自治区</option><option value="陕西省" data-code="610000">陕西省</option><option value="甘肃省" data-code="620000">甘肃省</option><option value="青海省" data-code="630000">青海省</option><option value="宁夏回族自治区" data-code="640000">宁夏回族自治区</option><option value="新疆维吾尔自治区" data-code="650000">新疆维吾尔自治区</option><option value="台湾省" data-code="710000">台湾省</option><option value="香港特别行政区" data-code="810000">香港特别行政区</option><option value="澳门特别行政区" data-code="820000">澳门特别行政区</option></select>
+                                                            <select data-city="@Model.CITY" name="city" class="form-control-select"><option value="" data-code="">—— 市 ——</option><option value="北京市市辖区" data-code="110100" selected="selected">北京市市辖区</option></select>
+                                                            <select data-district="@Model.DISTRICT" name="district" class="form-control-select"><option value="" data-code="">—— 区 ——</option><option value="东城区" data-code="110101" selected="selected">东城区</option><option value="西城区" data-code="110102">西城区</option><option value="朝阳区" data-code="110105">朝阳区</option><option value="丰台区" data-code="110106">丰台区</option><option value="石景山区" data-code="110107">石景山区</option><option value="海淀区" data-code="110108">海淀区</option><option value="门头沟区" data-code="110109">门头沟区</option><option value="房山区" data-code="110111">房山区</option><option value="通州区" data-code="110112">通州区</option><option value="顺义区" data-code="110113">顺义区</option><option value="昌平区" data-code="110114">昌平区</option><option value="大兴区" data-code="110115">大兴区</option><option value="怀柔区" data-code="110116">怀柔区</option><option value="平谷区" data-code="110117">平谷区</option><option value="密云区" data-code="110118">密云区</option><option value="延庆区" data-code="110119">延庆区</option></select>
+
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                                <div class="col-md-12">
+                                                    <label for="address" style="font-family: 微软雅黑">详细地址</label>
+                                                    <input name="detail_address" type="text" class="form-control" id="address" placeholder=@Model.DETAILADDR>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="row templatemo-form-buttons">
+                                            <div class="col-md-12" style="margin-top:2%;">
+                                                <button type="submit" class="btn btn-primary" style="font-family: 微软雅黑">更新</button>
+                                                <button type="reset" class="btn btn-default" style="font-family: 微软雅黑">恢复</button>
+                                            </div>
+                                        </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">确定要登出您的账户吗？</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="login.html" class="btn btn-primary">是的</a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">还是不了</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="templatemo-footer">
+                <div class="templatemo-copyright">
+                    <p>&copy; 吃瓜网 | 保留一切权利 </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="~/Scripts/account/jquery.min.js"></script>
+    <script src="~/Scripts/account/bootstrap.min.js"></script>
+    <script src="~/Scripts/account/templatemo_script.js"></script>
+    <script src="~/Scripts/select/jquery.min.js"></script>
+    <script src="~/Scripts/select/bootstrap.min.js"></script>
+    <script src="~/Scripts/select/distpicker.data.js"></script>
+    <script src="~/Scripts/select/distpicker.js"></script>
+    <script src="~/Scripts/select/main.js"></script>
+</body>
+</html>

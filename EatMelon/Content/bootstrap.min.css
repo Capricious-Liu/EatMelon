@@ -266,7 +266,7 @@ td, th {
 }
 
 @font-face {
-    font-family: 'Glyphicons Halflings';
+    font-family: '微软雅黑';
     src: url(../fonts/glyphicons-halflings-regular.eot);
     src: url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'), url(../fonts/glyphicons-halflings-regular.woff) format('woff'), url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'), url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')
 }
@@ -275,7 +275,7 @@ td, th {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    font-family: '微软雅黑';
     font-style: normal;
     font-weight: 400;
     line-height: 1;

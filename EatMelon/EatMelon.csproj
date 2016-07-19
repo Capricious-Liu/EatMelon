@@ -176,22 +176,29 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RegisterAndLoginController.cs" />
     <Compile Include="Controllers\SearchProductController.cs" />
+    <Compile Include="Controllers\UpdateInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Contains.cs" />
     <Compile Include="Models\Favours.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Manages.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\Pro_pics.cs" />
     <Compile Include="Models\Stores.cs" />
+    <Compile Include="Models\StoreTypes.cs" />
+    <Compile Include="Models\TB_CONTAINS.cs" />
     <Compile Include="Models\TB_FAVORS.cs" />
     <Compile Include="Models\TB_MANAGE.cs" />
+    <Compile Include="Models\TB_ORDER.cs" />
     <Compile Include="Models\TB_PRODUCT.cs" />
     <Compile Include="Models\TB_PRO_PIC.cs" />
     <Compile Include="Models\TB_STORE.cs" />
+    <Compile Include="Models\TB_STORE_TYPE.cs" />
     <Compile Include="Models\TB_USER.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,8 +207,11 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cart_style.css" />
     <Content Include="Content\etalage.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\log_style.css" />
+    <Content Include="Content\pay_style.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\templatemo_main.css" />
     <Content Include="favicon.ico" />
@@ -244,12 +254,32 @@
     <Content Include="images\flogo.png" />
     <Content Include="images\footer-social.png" />
     <Content Include="images\home.png" />
+    <Content Include="images\icons\linksbar\cart.png" />
+    <Content Include="images\icons\linksbar\cart2.png" />
+    <Content Include="images\icons\linksbar\lock.png" />
+    <Content Include="images\icons\linksbar\mail.png" />
+    <Content Include="images\icons\linksbar\pencil.png" />
     <Content Include="images\img-w.jpg" />
     <Content Include="images\img-w1.jpg" />
     <Content Include="images\kid-r-img.jpg" />
     <Content Include="images\kid-r-img1.jpg" />
     <Content Include="images\list-icon.png" />
     <Content Include="images\logo.jpg" />
+    <Content Include="images\log\address.png" />
+    <Content Include="images\log\banner.jpg" />
+    <Content Include="images\log\bg.jpg" />
+    <Content Include="images\log\bg1.jpg" />
+    <Content Include="images\log\bg2.jpg" />
+    <Content Include="images\log\bg3.jpg" />
+    <Content Include="images\log\bg_red.jpg" />
+    <Content Include="images\log\city.png" />
+    <Content Include="images\log\credit.png" />
+    <Content Include="images\log\dis.png" />
+    <Content Include="images\log\lock.png" />
+    <Content Include="images\log\person.png" />
+    <Content Include="images\log\phone.png" />
+    <Content Include="images\log\province.png" />
+    <Content Include="images\log\zipcode.png" />
     <Content Include="images\mail-icon.png" />
     <Content Include="images\man-r-img.jpg" />
     <Content Include="images\man-r-img1.jpg" />
@@ -268,6 +298,8 @@
     <Content Include="images\p6.jpg" />
     <Content Include="images\p7.jpg" />
     <Content Include="images\p8.jpg" />
+    <Content Include="images\payment\2.jpg" />
+    <Content Include="images\payment\bg1.jpg" />
     <Content Include="images\phone-icon.png" />
     <Content Include="images\phone.png" />
     <Content Include="images\product-slide\image1_large.jpg" />
@@ -289,6 +321,12 @@
     <Content Include="images\savings-icon.png" />
     <Content Include="images\search-icon.png" />
     <Content Include="images\shiping-icon.png" />
+    <Content Include="images\shopping_cart\bg.jpg" />
+    <Content Include="images\shopping_cart\bg1.jpg" />
+    <Content Include="images\shopping_cart\close1.png" />
+    <Content Include="images\shopping_cart\item1.png" />
+    <Content Include="images\shopping_cart\item2.png" />
+    <Content Include="images\shopping_cart\item3.png" />
     <Content Include="images\slide-arrows.png" />
     <Content Include="images\slide1.jpg" />
     <Content Include="images\slide1.png" />
@@ -296,6 +334,10 @@
     <Content Include="images\social-share.png" />
     <Content Include="images\start-rate.png" />
     <Content Include="images\to-top1.png" />
+    <Content Include="Scripts\account\bootstrap.min.js" />
+    <Content Include="Scripts\account\Chart.min.js" />
+    <Content Include="Scripts\account\jquery.min.js" />
+    <Content Include="Scripts\account\templatemo_script.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="images\Clothes\Thumbs.db" />
@@ -308,6 +350,15 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="images\favour\.DS_Store" />
     <Content Include="images\favour\Thumbs.db" />
+    <Content Include="images\icons\.DS_Store" />
+    <Content Include="images\icons\linksbar\.DS_Store" />
+    <Content Include="images\log\.DS_Store" />
+    <Content Include="images\log\Thumbs.db" />
+    <Content Include="images\payment\.DS_Store" />
+    <Content Include="images\payment\Thumbs.db" />
+    <Content Include="images\shopping_cart\.DS_Store" />
+    <Content Include="images\shopping_cart\Thumbs.db" />
+    <Content Include="Scripts\account\.DS_Store" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\easing.js" />
@@ -331,6 +382,7 @@
     <Content Include="Scripts\select\distpicker.js" />
     <Content Include="Scripts\select\jquery.min.js" />
     <Content Include="Scripts\select\main.js" />
+    <Content Include="Scripts\shopping_cart\jquery-1.11.1.min.js" />
     <Content Include="Scripts\templatemo_script.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
@@ -344,8 +396,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -376,6 +426,8 @@
     <Content Include="Views\AccountIndex\Index.cshtml" />
     <Content Include="Views\CreateStore\MyShop.cshtml" />
     <Content Include="Views\CreateStore\AddShop.cshtml" />
+    <Content Include="Scripts\shopping_cart\.DS_Store" />
+    <Content Include="Views\UpdateInfo\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
