@@ -175,6 +175,7 @@
     <Compile Include="Controllers\FavourController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MyOrderController.cs" />
     <Compile Include="Controllers\PayController.cs" />
     <Compile Include="Controllers\ProductDetailsController.cs" />
     <Compile Include="Controllers\RegisterAndLoginController.cs" />
@@ -446,6 +447,7 @@
     <Content Include="Views\StoreShow\DiscountShow.cshtml" />
     <Content Include="Views\StoreShow\Index.cshtml" />
     <Content Include="Views\Pay\Payment.cshtml" />
+    <Content Include="Views\MyOrder\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

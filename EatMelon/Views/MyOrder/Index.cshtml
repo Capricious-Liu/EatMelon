@@ -1,0 +1,141 @@
+﻿@model IEnumerable<EatMelon.Controllers.OrderMessage>
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>我的订单|吃瓜网|网上商城</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <link href="jqvmap/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/templatemo_main.css">
+</head>
+<body>
+    <div>
+        <img src="images/logo.jpg">
+    </div>
+    <div id="main-wrapper">
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <div class="logo"><h1 style="font-family: 微软雅黑">我的账号-我的订单</h1></div>
+                <div id="linksbar">
+                    <!-- class=group>-->
+                    <li class="icon cart">
+                        <a class="trigger" href="shopping_cart.html">
+                            <!-- 跳转到购物车页面 -->
+                        </a>
+                    </li>
+                    <li><a href="index.html">首页</a></li>
+                </div>
+            </div>
+        </div>
+        <div class="template-page-wrapper">
+            <div class="navbar-collapse collapse templatemo-sidebar">
+                <ul class="templatemo-sidebar-menu">
+                    <li><a href="account_index.html"><i class="fa fa-home"></i>账号主页</a></li>
+                    <li><a href="favours.html"><i class="fa fa-star"></i>收藏夹</a></li>
+                    <li class="active"><a href="#"><i class="fa fa-file-text-o"></i>我的订单</a></li>
+                    <li><a href="my_shop.html"><i class="fa fa-users"></i>我的商店</a></li>
+                    <li><a href="preferences.html"><i class="fa fa-cog"></i>个人资料</a></li>
+                    <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>登出</a></li>
+                </ul>
+            </div><!--/.navbar-collapse -->
+
+            <div class="templatemo-content-wrapper">
+                <div class="templatemo-content">
+                    <h1 style="font-family: 微软雅黑">我的订单</h1>
+                    <form class="form-horizontal">
+                        <div class="navbar-form">
+                            <div class="control-group">
+                                <!--<label class="control-label">按从晚到早的顺序</label>-->
+                                <form class="form-group">
+                                    <input type="text" class="form-control-search" id="templatemo_search_box" placeholder="搜索">
+                                    <span class="btn btn-default" onclick="javascript:location.href='order_search.html'" />Go</span>
+                                </form>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="table-responsive" align="center">
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th style="font-family: 微软雅黑">订单号</th>
+                                    <th style="font-family: 微软雅黑">商铺名</th>
+                                    <th style="font-family: 微软雅黑">商品名</th>
+                                    <th style="font-family: 微软雅黑">商品图</th>
+                                    <th style="font-family: 微软雅黑">总价</th>
+                                    <th style="font-family: 微软雅黑">状态</th>
+                                    <th style="font-family: 微软雅黑">创建时间</th>
+                                    <th style="font-family: 微软雅黑">查看详情</th>
+                                    <th style="font-family: 微软雅黑">去评论</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var order in Model)
+                                {
+                                    <tr class=@order.state_color>
+                                        <td><br><br><br>@order.index</td>
+                                        <td><br><br><br>@order.order_id</td>
+                                        <td><br><br><br>@order.store_name</td>
+                                        <td><br><br><br>@order.product_name</td>
+                                        <td><img src="images/favour/1.jpg"></td>
+                                        <td><br><br><br>￥@order.total_price</td>
+                                        <td style="font-family: 微软雅黑"><br><br>@order.state</td>
+                                        <td><br><br><br>@order.time</td>
+                                        <td><br><br><br><a href="order_details.html" class="btn btn-default" style="font-family: 微软雅黑">查看详情</a></td>
+                                        @if (order.state == "待评论")
+                                        {
+                                            <td><br><br><br><a href="comment.html" class="btn btn-default" style="font-family: 微软雅黑">去评论</a></td>
+                                        }
+                                        @if (order.state == "已完成")
+                                        {
+                                            <td><br><br><br><a href="change_comment.html" class="btn btn-default" style="font-family: 微软雅黑">修改评论</a></td>
+                                        }
+                                        <td><br><br><br></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="pagination pull-right">
+                        <li><a href="#">&laquo;</a></li>
+                        <li class=@Model.First().page_btn[0]><a href="~/MyOrder/Index?cur_page=1">1 <span class="sr-only">(current)</span></a></li>
+                        <li class=@Model.First().page_btn[1]><a href="~/MyOrder/Index?cur_page=2">2 <span class="sr-only">(current)</span></a></liclass=@Model.First().page_btn[0]>
+                        <li class=@Model.First().page_btn[2]><a href="~/MyOrder/Index?cur_page=3">3 <span class="sr-only">(current)</span></a></li>
+                        <li class=@Model.First().page_btn[3]><a href="~/MyOrder/Index?cur_page=4">4 <span class="sr-only">(current)</span></a></liclass=@Model.First().page_btn[0]>
+                        <li class=@Model.First().page_btn[4]><a href="~/MyOrder/Index?cur_page=5">5 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel">确定要登出您的账户吗？</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="login.html" class="btn btn-primary">是的</a>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">还是不了</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="templatemo-footer">
+                <div class="templatemo-copyright">
+                    <p>&copy; 吃瓜网 | 保留一切权利 </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/account/jquery.min.js"></script>
+    <script src="js/account/bootstrap.min.js"></script>
+    <script src="js/account/templatemo_script.js"></script>
+    </div>
+</body>
+</html>
