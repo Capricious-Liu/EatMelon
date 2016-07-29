@@ -1,0 +1,36 @@
+﻿
+@model IEnumerable<test2.Controllers.thismanagestore>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { cur_user = ViewData["uid"] })
+</p>
+
+<table class="table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_manage.U_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_manage.S_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_manage.AUTHORITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_store.NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.db_store.QUALITY_RATING)
+            </td>
+        </tr>
+    }
+</table>
